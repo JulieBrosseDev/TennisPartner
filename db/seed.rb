@@ -1,3 +1,5 @@
+User.destroy_all
+
 puts 'Creating users...'
 users_attributes = [
   {
