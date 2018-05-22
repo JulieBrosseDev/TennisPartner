@@ -1,6 +1,7 @@
 class AnswersController < ApplicationController
 
   def create
+    byebug
     @answer = Answer.new(answer_params)
     if @answer.save
       return redirect_to match_show if @answer.match?
