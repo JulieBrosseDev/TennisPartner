@@ -17,4 +17,7 @@ class User < ApplicationRecord
   scope :by_opponent_gender, ->(opponent_gender) { where(opponent_gender: opponent_gender) }
   scope :by_search_radius, ->(search_radius) { where(search_radius: search_radius) }
 
+  def already_matched?(user)
+    Answer.invitations(self, user).like.empty?
+  end
 end
