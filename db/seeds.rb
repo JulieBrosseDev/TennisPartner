@@ -6,48 +6,48 @@ users = [
     name:         'Charles',
     ranking:       4,
     gender:       'Male',
-    age:           33
-    email: 'charles@gmail.com'
+    age:           33,
+    email: 'charles@gmail.com',
     password: 'azerty'
   },
   {
     name:         'Jonathan',
     ranking:       2,
     gender:       'Male',
-    age:           37
-    email: 'jonathan@gmail.com'
+    age:           37,
+    email: 'jonathan@gmail.com',
     password: 'azerty'
   },
   {
     name:         'Lynn',
     ranking:       5,
     gender:       'Female',
-    age:           22
-    email: 'lynn@gmail.com'
+    age:           22,
+    email: 'lynn@gmail.com',
     password: 'azerty'
   },
   {
     name:         'Marie',
     ranking:       1,
     gender:       'Female',
-    age:           40
-    email: 'marie@gmail.com'
+    age:           40,
+    email: 'marie@gmail.com',
     password: 'azerty'
   },
   {
     name:         'Louis',
     ranking:       5,
     gender:       'Male',
-    age:           22
-    email: 'louis@gmail.com'
+    age:           22,
+    email: 'louis@gmail.com',
     password: 'azerty'
   },
   {
     name:         'Adrien',
     ranking:       5,
     gender:       'Male',
-    age:           15
-    email: 'adrien@gmail.com'
+    age:           15,
+    email: 'adrien@gmail.com',
     password: 'azerty'
   }
 ]
