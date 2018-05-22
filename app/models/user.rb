@@ -5,12 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :answers
-  has_many :reciever_answers, foreign_key: "receiver_id"
+  has_many :receiver_answers, foreign_key: "receiver_id"
 
   validates :name, presence: true
   validates :ranking, presence: true
   validates :gender, presence: true
   validates :age, presence: true
 
+  scope :all_except, ->(user) { where.not(id: user) }
 end
 

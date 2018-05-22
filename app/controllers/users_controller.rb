@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     # if params[:search_radius, :opponent_gender, :opponent_ranking].present?
     #   @users = User.near(params["search_radius"], 20)
     # else
-      @users = User.all
+      @user = User.first
     # end
   end
 end
