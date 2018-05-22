@@ -13,5 +13,8 @@ class User < ApplicationRecord
   validates :age, presence: true
 
   scope :all_except, ->(user) { where.not(id: user) }
-end
+  scope :by_opponent_ranking, ->(opponent_ranking) { where(opponent_ranking: opponent_ranking) }
+  scope :by_opponent_gender, ->(opponent_gender) { where(opponent_gender: opponent_gender) }
+  scope :by_search_radius, ->(search_radius) { where(search_radius: search_radius) }
 
+end
