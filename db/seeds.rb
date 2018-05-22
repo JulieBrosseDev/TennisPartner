@@ -1,3 +1,4 @@
+Answer.destroy_all
 User.destroy_all
 
 puts 'Creating users...'
@@ -51,7 +52,26 @@ users = [
     password: 'azerty'
   }
 ]
+
 User.create!(users)
+
+puts 'Creating answers...'
+answers = [
+  {
+    status: 'dislike',
+    receiver: User.second,
+    user: User.first
+  },
+  {
+    status: 'like',
+    receiver: User.last,
+    user: User.first
+  }
+]
+
+
+
+Answer.create!(answers)
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
