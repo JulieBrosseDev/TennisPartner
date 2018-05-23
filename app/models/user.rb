@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   has_many :answers
   has_many :receiver_answers, foreign_key: "receiver_id", class_name: 'Answer'
 
@@ -26,3 +29,4 @@ class User < ApplicationRecord
   end
 
 end
+
