@@ -1,5 +1,5 @@
 
-<%= image_tag "https://cdn.iconscout.com/public/images/icon/free/png-512/avatar-user-hacker-3830b32ad9e0802c-512x512.png"%>
+<div class="card-header" style="background-image: url(<%= cl_image_path @user.picture %>);"> </div>
 <br>
 <h2> <%= @user.name %></h2>
 <p>Age: <%= @user.age %></p>

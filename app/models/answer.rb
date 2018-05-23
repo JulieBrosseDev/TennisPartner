@@ -13,7 +13,6 @@ class Answer < ApplicationRecord
   private
 
   def check_for_match
-    byebug
     # On sort de la method si le receveur n'a pas deja liké le user
     return unless receiver.already_liked?(user)
     # On set le status de l'answer en cours de creation a match

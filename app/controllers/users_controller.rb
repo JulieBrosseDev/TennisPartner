@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     #@users = apply_scopes(User).all
 
     @users = User.displayable_for(current_user)
-    @user = User.find(2)
+    @user = User.find(15)
     @answer = Answer.new
     # end
   end

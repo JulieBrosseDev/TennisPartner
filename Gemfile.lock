@@ -73,11 +73,10 @@ GEM
     geocoder (1.4.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-<<<<<<< HEAD
+
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-=======
->>>>>>> 9aad246fa95586a292febd934e3064adc1b0c1ad
+
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -219,10 +218,7 @@ DEPENDENCIES
   devise
   figaro
   font-awesome-sass (~> 5.0.9)
-<<<<<<< HEAD
-=======
   geocoder
->>>>>>> 9aad246fa95586a292febd934e3064adc1b0c1ad
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
