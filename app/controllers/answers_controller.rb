@@ -4,7 +4,7 @@ class AnswersController < ApplicationController
     byebug
     @answer = Answer.new(answer_params)
     if @answer.save
-      return redirect_to match_show if @answer.match?
+      return redirect_to answer_path if @answer.match?
       redirect_to users_path
     end
   end
