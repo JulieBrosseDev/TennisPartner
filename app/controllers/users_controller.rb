@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     # else
 
     #@users = apply_scopes(User).all
+
     @users = User.displayable_for(current_user)
     @user = User.first
     @answer = Answer.new
