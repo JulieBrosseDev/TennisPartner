@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   has_many :answers
   has_many :receiver_answers, foreign_key: "receiver_id", class_name: 'Answer'
 
@@ -11,6 +14,7 @@ class User < ApplicationRecord
   validates :ranking, presence: true
   validates :gender, presence: true
   validates :age, presence: true
+  validates :address, presence: true
 
   scope :all_except_I, ->(user) { where.not(id: user) }
   scope :by_opponent_ranking, ->(opponent_ranking) { where(ranking: opponent_ranking) }
@@ -26,3 +30,4 @@ class User < ApplicationRecord
   end
 
 end
+

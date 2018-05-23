@@ -64,11 +64,9 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
+    geocoder (1.4.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-    has_scope (0.7.2)
-      actionpack (>= 4.1)
-      activesupport (>= 4.1)
     i18n (1.0.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -198,7 +196,7 @@ DEPENDENCIES
   devise
   figaro
   font-awesome-sass (~> 5.0.9)
-  has_scope
+  geocoder
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
