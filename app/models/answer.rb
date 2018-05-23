@@ -3,6 +3,7 @@ class Answer < ApplicationRecord
   belongs_to :receiver, class_name: "User", foreign_key: "receiver_id"
   enum status: [:like, :dislike, :match]
   validates :status, presence: true
+  validates :answer, uniqueness: { scope: :user }
 
   scope :involving, ->(receiver, user) { where(user: receiver).where(receiver: user) }
   scope :likes_between, ->(receiver, user) { involving(receiver, user).like }
