@@ -1,11 +1,13 @@
 class AnswersController < ApplicationController
 
   def create
-    byebug
-    @answer = Answer.new(answer_params)
+    @answer = current_user.answers.new(answer_params)
     if @answer.save
-      return redirect_to match_show if @answer.match?
-      redirect_to users_path
+      return redirect_to answer_path(@answer) if @answer.match?
+      redirect_to root_path
+    else
+      flash[:notice] = 'Impossible to like/dislike, try again :)'
+      redirect_to root_path
     end
   end
 
