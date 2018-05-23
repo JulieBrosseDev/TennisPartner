@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -15,6 +13,7 @@ class User < ApplicationRecord
   validates :gender, presence: true
   validates :age, presence: true
   validates :address, presence: true
+  validates :search_radius, presence: true
 
   scope :all_except_I, ->(user) { where.not(id: user) }
   scope :by_opponent_ranking, ->(opponent_ranking) { where(ranking: opponent_ranking) }

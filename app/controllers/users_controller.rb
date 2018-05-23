@@ -1,14 +1,13 @@
 class UsersController < ApplicationController
 
-  def index
-    # if params[:search_radius, :opponent_gender, :opponent_ranking].present?
-    #   @users = User.near(params["search_radius"], 20)
-    # else
-    #@users = apply_scopes(User).all
-
-    @users = User.displayable_for(current_user)
-    @user = User.first
-    @answer = Answer.new
-    # end
+  def index(search_radius = 10)
+    if params[:search][:address].present?
+      @users.near(params["search"]["address"], search_radius)
+    else
+      alert
+      @users = User.displayable_for(current_user)
+      @user = User.first
+      @answer = Answer.new
+    end
   end
 end
