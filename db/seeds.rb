@@ -10,6 +10,7 @@ users = [
     age:           33,
     email: 'charles@gmail.com',
     password: 'azerty'
+    address: 'cheminement Enrico Caruso, Toulouse'
   },
   {
     name:         'Jonathan',
@@ -18,6 +19,7 @@ users = [
     age:           37,
     email: 'jonathan@gmail.com',
     password: 'azerty'
+    address: '5 chemin des Ramiers, Blagnac'
   },
   {
     name:         'Lynn',
@@ -26,6 +28,7 @@ users = [
     age:           22,
     email: 'lynn@gmail.com',
     password: 'azerty'
+    address: '1 rue des Pins, Tournefeuille'
   },
   {
     name:         'Marie',
@@ -34,6 +37,7 @@ users = [
     age:           40,
     email: 'marie@gmail.com',
     password: 'azerty'
+    address: 'Bonnefoy, Toulouse'
   },
   {
     name:         'Louis',
@@ -42,6 +46,7 @@ users = [
     age:           22,
     email: 'louis@gmail.com',
     password: 'azerty'
+    address: 'Les Abattoirs, Toulouse'
   },
   {
     name:         'Adrien',
@@ -49,7 +54,8 @@ users = [
     gender:       'Male',
     age:           15,
     email: 'adrien@gmail.com',
-    password: 'azerty'
+    password: 'azerty',
+    address: 'Jardin des Plantes, Toulouse'
   }
 ]
 
