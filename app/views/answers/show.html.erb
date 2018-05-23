@@ -1,1 +1,10 @@
-<p>It's a match!</p>
+<div class="container">
+  <div class="match">
+    <h2>It's a match!</h2>
+    <p>
+      <%= current_user.name %>
+      &
+      <%= @answer.user.name %>
+    </p>
+  </div>
+</div>
