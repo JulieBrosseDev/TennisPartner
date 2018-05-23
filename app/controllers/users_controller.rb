@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     #   @users = User.near(params["search_radius"], 20)
     # else
 
-    #@users = apply_scopes(User).all
+    @users = apply_scopes(User).all
     @user = User.first
     @answer = Answer.new
     # end
