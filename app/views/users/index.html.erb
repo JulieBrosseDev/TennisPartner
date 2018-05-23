@@ -5,6 +5,8 @@
 <p>Age: <%= @user.age %></p>
 <p>Ranking: <%= @user.ranking %></p>
 
+<%= @users.pluck(:email) %>
+
 
 <%= simple_form_for @answer do |f| %>
   <%= f.hidden_field :receiver_id, :value => @user.id %>
