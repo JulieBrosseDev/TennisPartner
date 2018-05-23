@@ -13,7 +13,7 @@ class AnswersController < ApplicationController
 
 
   def show
-    @answer = Answer.find(params[:id])
+    @answer = Answer.match.find(params[:id])
   end
 
 

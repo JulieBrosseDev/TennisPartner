@@ -15,6 +15,7 @@ class User < ApplicationRecord
   validates :gender, presence: true
   validates :age, presence: true
   validates :address, presence: true
+  validates :picture, presence: true
 
   scope :all_except_I, ->(user) { where.not(id: user) }
   scope :by_opponent_ranking, ->(opponent_ranking) { where(ranking: opponent_ranking) }
@@ -23,7 +24,7 @@ class User < ApplicationRecord
   scope :has_answer, ->(user) { joins(:answers).where(answers: { user: user})}
   scope :has_feedback_by, ->(user) {joins(:receiver_answers).merge(Answer.where(user: user))}
   scope :has_no_feedback_by, ->(user) {where.not(id: has_feedback_by(user))}
-  scope :displayable_for, ->(user) { all_except(user).has_no_feedback_by(user)}
+  scope :displayable_for, ->(user) { all_except_I(user).has_no_feedback_by(user)}
 
   def already_liked?(user)
     user.receiver_answers.like.exists?(user: self)
