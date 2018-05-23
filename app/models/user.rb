@@ -17,6 +17,6 @@ class User < ApplicationRecord
   scope :by_opponent_gender, ->(opponent_gender) { where(gender: opponent_gender) }
 
   def already_liked?(user)
-    user.receiver_answers.like.exists(user: self)
+    user.receiver_answers.like.exists?(user: self)
   end
 end

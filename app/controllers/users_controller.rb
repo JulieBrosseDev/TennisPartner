@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     # else
 
     #@users = apply_scopes(User).all
-    @user = User.first
+    @user = User.last
     @answer = Answer.new
     # end
   end
