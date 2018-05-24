@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  mount_uploader :picture, PictureUploader
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
@@ -34,6 +35,8 @@ class User < ApplicationRecord
   scope :has_answer, ->(user) { joins(:answers).where(answers: { user: user})}
   scope :has_feedback_by, ->(user) {joins(:receiver_answers).merge(Answer.where(user: user))}
   scope :has_no_feedback_by, ->(user) {where.not(id: has_feedback_by(user))}
+
+
   scope :displayable_for, ->(user) {
     all_except_me(user)
       .has_no_feedback_by(user)
@@ -42,7 +45,7 @@ class User < ApplicationRecord
       .opponent_with_gender(user.opponent_gender)
     }
 
-  
+
   def already_liked?(user)
     user.receiver_answers.like.exists?(user: self)
   end
