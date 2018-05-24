@@ -4,6 +4,5 @@ class UsersController < ApplicationController
       @users = User.displayable_for(current_user)
       @user = User.first
       @answer = Answer.new
-    end
-  end
+   end
 end
