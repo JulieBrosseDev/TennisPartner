@@ -20,11 +20,12 @@ class User < ApplicationRecord
   has_many :answers
   has_many :receiver_answers, foreign_key: "receiver_id", class_name: 'Answer'
 
-  #validates :name, presence: true
-  #validates :ranking, presence: true
-  #validates :gender, presence: true
-  #validates :age, presence: true
-  #validates :address, presence: true
+  # validates :name, presence: true
+  # validates :ranking, presence: true
+  # validates :gender, presence: true
+  # validates :age, presence: true
+  # validates :address, presence: true
+  # validates :picture, presence: true
 
   scope :all_except_me, ->(user) { where.not(id: user) }
   scope :opponent_with_ranking, -> (opponent_ranking) { where(ranking: opponent_ranking) }
@@ -41,6 +42,7 @@ class User < ApplicationRecord
       .opponent_with_gender(user.opponent_gender)
     }
 
+  
   def already_liked?(user)
     user.receiver_answers.like.exists?(user: self)
   end
