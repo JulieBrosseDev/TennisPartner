@@ -1,5 +1,5 @@
 
-<div class="profile-picture" style="background-image: url(<%= cl_image_path current_user.picture %>);"> </div>
+<div class="profile-picture" style="background-image: url(<%= cl_image_path @user.picture %>);"> </div>
 <br>
 <h2> <%= @user.name %></h2>
 <p>Age: <%= @user.age %></p>
