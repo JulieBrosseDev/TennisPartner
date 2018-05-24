@@ -8,7 +8,7 @@ class User < ApplicationRecord
     opponent_ranking: (1..5),
     name: "No Name",
     address: "",
-    gender: "female",
+    gender: "male",
     ranking: 1,
     age: "",
     picture: "../../assets/images/default.jpg"
@@ -37,12 +37,12 @@ class User < ApplicationRecord
   scope :displayable_for, ->(user) {
     all_except_me(user)
       .has_no_feedback_by(user)
-      .opponent_with_ranking(user.opponent_ranking)
       .near(user.address, user.safe_search_radius)
-      .opponent_with_gender(user.opponent_gender)
+      # .opponent_with_ranking(user.opponent_ranking)
+      # .opponent_with_gender(user.opponent_gender)
     }
 
-  
+
   def already_liked?(user)
     user.receiver_answers.like.exists?(user: self)
   end
