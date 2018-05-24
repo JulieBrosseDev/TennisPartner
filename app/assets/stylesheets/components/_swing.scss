@@ -1,0 +1,132 @@
+html,
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fcd424;
+  font: normal 16px/24px "Helvetica Neue", Helvetica, Arial, freesans,
+    sans-serif;
+}
+
+button,
+input,
+code {
+  display: inline-block;
+  outline: none;
+  font: inherit;
+  border: none;
+  background: #fde991;
+  padding: 0;
+}
+
+button {
+  color: #c7433e;
+  cursor: pointer;
+}
+
+input {
+  width: 50px;
+}
+
+.card-picture {
+  background-size: cover;
+  background-position: center;
+  height: 280px;
+  width: 355px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.card-name {
+  font-size: 25px;
+}
+
+
+
+
+#viewport li {
+  width: 375px;
+  height: 667px;
+  list-style: none;
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
+  line-height: 300px;
+  text-align: center;
+  font-size: 100px;
+  border: 10px solid #ececec;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+#viewport li.clubs,
+#viewport li.spades {
+  color: #373737;
+}
+
+#viewport li.diamonds,
+#viewport li.hearts {
+  color: #ed5d52;
+}
+
+#viewport li.in-deck:nth-child(3) {
+  top: 2px;
+  transform: translate(2px, 2px) rotate(0.4deg);
+}
+
+#viewport li.in-deck:nth-child(2) {
+  top: 4px;
+  transform: translate(-4px, -2px) rotate(-1deg);
+}
+
+#control {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0;
+}
+
+#control button {
+  background: #ffffff;
+  color: #373737;
+  font-weight: bold;
+  border: none;
+  font: normal 18px/24px "Helvetica Neue", Helvetica, Arial, freesans,
+    sans-serif;
+  margin: 0 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 0 #63211f;
+  outline: none;
+  position: relative;
+}
+#control button:active {
+  background: #63211f;
+  color: #ffffff;
+  bottom: -2px;
+  box-shadow: none;
+}
+
+#source {
+  width: 500px;
+  margin: 20px auto;
+}
+
+#source a {
+  color: #c7433e;
+}
+
+.hidden {
+  display: none
+}
+
+
