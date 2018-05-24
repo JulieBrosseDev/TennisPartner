@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'users#index'
+  resources :criterias
   resources :answers, only:[:create, :show] do
     resources :conversations, only: :create
   end

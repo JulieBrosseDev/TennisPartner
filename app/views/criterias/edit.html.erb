@@ -1,0 +1,11 @@
+<div class="container">
+ <h2>Change your search preferences</h2>
+
+  <%= simple_form_for @user, url: criteria_path(@user), method: :patch do |f| %>
+    <%= f.input :opponent_ranking, collection: 0..5 %>
+    <%= f.input :opponent_gender %>
+    <%= f.input :search_radius, as: :range, input_html: { min: 0, max: 50, step: 1 } %>
+    <%= f.button :submit, "Update" %>
+  <% end %>
+    <%= link_to "Back", :back %>
+</div>
