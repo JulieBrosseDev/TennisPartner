@@ -1,13 +1,14 @@
+<div id="viewport">
+  <ul class="stack">
+    <% @users.each do |user|%>
+      <li >
+        <div class="card-picture" style="background-image: url(<%= cl_image_path user.picture %>);">
+        </div>
+        <div class="card-name" >
+          <%= user.name %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
-<div class="profile-picture" style="background-image: url(<%= cl_image_path @user.picture %>);"> </div>
-<br>
-<h2> <%= @user.name %></h2>
-<p>Age: <%= @user.age %></p>
-<p>Ranking: <%= @user.ranking %></p>
-
-
-<%= simple_form_for @answer do |f| %>
-  <%= f.hidden_field :receiver_id, :value => @user.id %>
-  <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success" %>
-  <%= f.submit name: "answer[status]", value: "dislike", class: "btn btn-danger" %>
-<% end %>
