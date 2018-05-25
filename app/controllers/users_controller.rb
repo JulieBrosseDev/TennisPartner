@@ -7,14 +7,16 @@ class UsersController < ApplicationController
    end
 
    def edit
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
+    super
    end
 
    def update
+    byebug
     @user = User.find(params[:id])
       if @user.update(user_params)
       flash[:success] = 'Your profile has been updated.'
-      redirect_to profile_path(@user.user_id)
+      redirect_to edit_user_registration(@user.user_id)
     else
       @user.errors.full_messages
       flash[:error] = @user.errors.full_messages

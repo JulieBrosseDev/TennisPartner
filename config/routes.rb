@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users' }
   root to: 'users#index'
   resources :criterias
   resources :answers, only:[:create, :show] do
