@@ -36,7 +36,7 @@ input {
   background-size: cover;
   background-position: center;
   height: 280px;
-  width: 355px;
+  width: 100%;
   position: relative;
   overflow: hidden;
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
@@ -49,8 +49,8 @@ input {
 
 
 #viewport li {
-  width: 375px;
-  height: 667px;
+  width: 100vw;
+  height: 100vh;
   list-style: none;
   background: #fff;
   border-radius: 5px;
@@ -58,8 +58,6 @@ input {
   top: 0;
   left: 0;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
-  line-height: 300px;
-  text-align: center;
   font-size: 100px;
   border: 10px solid #ececec;
   box-sizing: border-box;
