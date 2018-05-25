@@ -9,7 +9,7 @@ class User < ApplicationRecord
     opponent_ranking: (1..5),
     name: "No Name",
     address: "",
-    gender: "female",
+    gender: "male",
     ranking: 1,
     age: "",
     picture: "../../assets/images/default.jpg"

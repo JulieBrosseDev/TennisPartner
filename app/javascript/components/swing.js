@@ -22,6 +22,8 @@ function initSwing() {
     stack.on("throwoutleft", function(e) {
       console.log('je dislike')
       callBackEnd('dislike')
+      const dislikeBtn = document.getElementById("dislike");
+      dislikeBtn.click();
 
       cleanCard(e)
     });
@@ -29,7 +31,10 @@ function initSwing() {
     stack.on("throwoutright", function(e) {
       console.log('je like')
       callBackEnd('like')
-
+      const index = e.target.dataset.index;
+      console.log(e);
+      const likeBtn = document.getElementById(`like-${index}`);
+      likeBtn.click();
       cleanCard(e)
     });
   });
