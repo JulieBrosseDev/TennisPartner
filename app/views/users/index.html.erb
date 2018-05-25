@@ -4,10 +4,23 @@
       <li data-index="<%= user.id %>">
         <div class="card-picture" style="background-image: url(<%= cl_image_path user.picture unless user.picture.blank?%>);">
         </div>
-        <div class="card-name" >
+        <h4 class="card-name" > Name:
           <%= user.name %>
-        </div>
-        <div> <%= simple_form_for @answer do |f| %>
+        </h4>
+
+        <h4 class="card-age" > Age:
+          <%= user.age %>
+        </h4>
+
+        <h4 class="card-ranking" >Ranking:
+          <%= user.ranking %>
+        </h4>
+
+        <h4 class="description" >Description:
+          <%= user.description %>
+        </h4>
+
+        <div class="btn-like-dislike" > <%= simple_form_for @answer do |f| %>
                 <%= f.hidden_field :receiver_id, :value => user.id %>
                <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success", id: "like-#{user.id}" %>
                 <%= f.submit name: "answer[status]", value: "dislike", class: "btn btn-danger", id: "dislike-#{user.id}" %>
@@ -17,3 +30,5 @@
     <% end %>
   </ul>
 </div>
+
+
