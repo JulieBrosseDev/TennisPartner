@@ -1,0 +1,23 @@
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.wrapper-signin {
+  background-color: lightgrey;
+}
+
+.container-signin {
+  font-size: 12px;
+}
+
+.carousel {
+
+  & img {
+  height: 100px;
+    object-fit: cover;
+  }
+}
