@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'has_scope'
+gem 'cloudinary'
 
 
 group :development do

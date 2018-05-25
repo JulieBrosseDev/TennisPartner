@@ -1,18 +1,23 @@
-.wrapper {
-
-}
-
-.signin-container {
-  height: 100vh;
-  background-color: rgba(230, 230, 230, 0.8); ;
-  font-size: 12px;
+h2 {
   text-align: center;
 }
 
-.signin-background {
+p {
+  text-align: center;
+}
 
+.wrapper-signin {
+  background-color: lightgrey;
+}
+
+.container-signin {
+  font-size: 12px;
 }
 
 .carousel {
-  width: 50vh
+
+  & img {
+  height: 100px;
+    object-fit: cover;
+  }
 }
