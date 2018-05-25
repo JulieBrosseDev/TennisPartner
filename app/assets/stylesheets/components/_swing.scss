@@ -1,36 +1,4 @@
-html,
-body,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  background: #fcd424;
-  font: normal 16px/24px "Helvetica Neue", Helvetica, Arial, freesans,
-    sans-serif;
-}
-
-button,
-input,
-code {
-  display: inline-block;
-  outline: none;
-  font: inherit;
-  border: none;
-  background: #fde991;
-  padding: 0;
-}
-
-button {
-  color: #c7433e;
-  cursor: pointer;
-}
-
-input {
-  width: 50px;
-}
 
 .card-picture {
   background-size: cover;
@@ -50,7 +18,7 @@ input {
 
 #viewport li {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 50px);
   list-style: none;
   background: #fff;
   border-radius: 5px;
@@ -125,6 +93,12 @@ input {
 
 .hidden {
   display: none
+}
+
+.btn-like-dislike {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 
