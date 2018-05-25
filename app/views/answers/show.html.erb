@@ -1,0 +1,14 @@
+<div class="container">
+    <h2 id="match-title">It's a match!</h2>
+  <div class="match">
+    <p>
+      <%= current_user.name %>
+    </p>
+      <div class="profile-picture" style="background-image: url(<%= cl_image_path current_user.picture %>);"> </div>
+
+     <div class="profile-picture" style="background-image: url(<%= cl_image_path @answer.receiver.picture %>);"> </div>
+     <p>
+      <%= @answer.receiver.name %>
+    </p>
+  </div>
+</div>

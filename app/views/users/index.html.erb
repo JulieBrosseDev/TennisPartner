@@ -1,13 +1,34 @@
+<div id="viewport">
+  <ul class="stack">
+    <% @users.each do |user|%>
+      <li data-index="<%= user.id %>">
+        <div class="card-picture" style="background-image: url(<%= cl_image_path user.picture unless user.picture.blank?%>);">
+        </div>
+        <h4 class="card-name" > Name:
+          <%= user.name %>
+        </h4>
 
-<%= image_tag "https://cdn.iconscout.com/public/images/icon/free/png-512/avatar-user-hacker-3830b32ad9e0802c-512x512.png"%>
-<br>
-<h2> <%= @user.name %></h2>
-<p>Age: <%= @user.age %></p>
-<p>Ranking: <%= @user.ranking %></p>
+        <h4 class="card-age" > Age:
+          <%= user.age %>
+        </h4>
+
+        <h4 class="card-ranking" >Ranking:
+          <%= user.ranking %>
+        </h4>
+
+        <h4 class="description" >Description:
+          <%= user.description %>
+        </h4>
+
+        <div class="btn-like-dislike" > <%= simple_form_for @answer do |f| %>
+                <%= f.hidden_field :receiver_id, :value => user.id %>
+               <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success", id: "like-#{user.id}" %>
+                <%= f.submit name: "answer[status]", value: "dislike", class: "btn btn-danger", id: "dislike-#{user.id}" %>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 
-<%= simple_form_for @answer do |f| %>
-  <%= f.hidden_field :receiver_id, :value => @user.id %>
-  <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success" %>
-  <%= f.submit name: "answer[status]", value: "dislike", class: "btn btn-danger" %>
-<% end %>

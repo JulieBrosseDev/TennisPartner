@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/glyph-fr/redactor-rails.git
+  revision: 6f6655fd71199700f2e5d7bc1f7f3c19f37dde50
+  specs:
+    redactor-rails (0.6.0)
+      mime-types
+      orm_adapter
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -49,6 +57,10 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     cloudinary (1.9.1)
       aws_cf_signer
       rest-client
@@ -70,6 +82,7 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
+    geocoder (1.4.7)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     has_scope (0.7.2)
@@ -214,11 +227,13 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bootstrap-sass (~> 3.3)
+
+  carrierwave (~> 1.2)
   cloudinary
   devise
   figaro
   font-awesome-sass (~> 5.0.9)
-  has_scope
+  geocoder
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
@@ -226,6 +241,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.1.6)
+  redactor-rails!
   redis
   sass-rails
   simple_form
