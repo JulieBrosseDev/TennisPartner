@@ -22,7 +22,9 @@ function initSwing() {
     stack.on("throwoutleft", function(e) {
       console.log('je dislike')
       callBackEnd('dislike')
-      const dislikeBtn = document.getElementById("dislike");
+      const index = e.target.dataset.index;
+      console.log(e)
+      const dislikeBtn = document.getElementById(`dislike-${index}`);
       dislikeBtn.click();
 
       cleanCard(e)
