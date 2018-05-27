@@ -8,7 +8,7 @@
         </div>
 
         <h4 class="distance-from-user" >
-          <i class="fas fa-map-marker"></i>
+          <i class="fas fa-map-marker-alt"></i>
           <%= Geocoder::Calculations.distance_between([current_user.latitude,current_user.longitude], [user.latitude,user.longitude]).round(1) %>kms
         </h4>
 
@@ -22,12 +22,13 @@
           <%= user.description %>
         </h4>
 
-
-        <div class="btn-like-dislike" > <%= simple_form_for @answer do |f| %>
-                <%= f.hidden_field :receiver_id, :value => user.id %>
-               <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success", id: "like-#{user.id}" %>
-                <%= f.submit name: "answer[status]", value: "dislike", class: "btn btn-danger", id: "dislike-#{user.id}" %>
-          <% end %>
+        <div class="buttons-like-dislike" >
+          <div class="btn-like-dislike" > <%= simple_form_for @answer do |f| %>
+                  <%= f.hidden_field :receiver_id, :value => user.id %>
+                  <%= f.submit name: "answer[status]", value: "dislike", class: "btn btn-danger btn-dislike-button", id: "dislike-#{user.id}" %>
+                  <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success btn-like-button", id: "like-#{user.id}" %>
+            <% end %>
+          </div>
         </div>
       </li>
     <% end %>
