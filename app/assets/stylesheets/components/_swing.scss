@@ -11,11 +11,22 @@
   border-radius: 5px;
 }
 .card-name-age {
-  font-size: 25px;
+  font-size: 20px;
   font-color: white;
+  color: white;
   position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
 
+.card-image-rank {
+  height: 10px;
+  width: 10px;
+}
+
+img {
+  height: 20px;
+}
 
 #viewport li {
   width: 100vw;
