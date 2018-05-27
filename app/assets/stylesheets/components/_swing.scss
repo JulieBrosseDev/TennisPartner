@@ -107,10 +107,37 @@ img {
   display: none
 }
 
-.btn-like-dislike {
+.buttons-like-dislike {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 0px;
 }
 
+.btn-like-button {
+  padding-left: 64px;
+  padding-right: 64px;
+}
 
+.btn-dislike-button {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
+#new_answer {
+  margin-top: 60px;
+}
+
+#viewport li.in-deck .btn-like-button {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+#viewport li.in-deck .btn-dislike-button {
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
