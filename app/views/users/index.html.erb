@@ -4,14 +4,8 @@
     <% @users.each do |user|%>
       <li data-index="<%= user.id %>">
         <div class="card-picture" style="background-image: url(<%= cl_image_path user.picture unless user.picture.blank?%>);">
+          <div class="card-name-age"> <%= user.name %>, <%= user.age %></div>
         </div>
-        <h4 class="card-name" > Name:
-          <%= user.name %>
-        </h4>
-
-        <h4 class="card-age" > Age:
-          <%= user.age %>
-        </h4>
 
         <h4 class="card-ranking" >Ranking:
           <%= user.ranking %>
