@@ -4,10 +4,9 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "bootstrap": "3",
-
-    "slick-carousel": "^1.8.1",
-
+    "gmaps": "^0.4.24",
     "jquery": "^3.3.1",
+    "slick-carousel": "^1.8.1",
     "swing": "^3.1.1"
   },
   "devDependencies": {
