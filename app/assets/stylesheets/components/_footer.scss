@@ -2,8 +2,7 @@
   background: #F4F4F4;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px 50px;
+  justify-content: space-around;
   color: rgba(0,0,0,0.3);
   position: fixed;
   width: 100%;
@@ -19,15 +18,19 @@
   color: black;
   opacity: 0.15;
   text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
+  font-size: 40px;
+  padding: 0px 40px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
-  color: #D23333;
-}
+
+
+
+
+
 
 
 
