@@ -1,7 +1,7 @@
 <h2>Let's chat and Plan!</h2>
-<div><%= @conversation[:id] %></div>
+<div><%= @conversation.messages %></div>
 <div>
-  <%= simple_form_for (@conversation) do |f| %>
+  <%= simple_form_for[@conversation, @message] do |f| %>
   <%= f.input @message.content %>
   <%= f.submit "SEND", class: "btn btn-primary" %>
   <% end %>

@@ -1,10 +1,13 @@
 class ConversationsController < ApplicationController
   def create
-    @conversation = Conversation.new(params[:id])
+    @answer = Answer.find(params[:id])
+    @conversation = Conversation.new(answer: @answer_id)
     @conversation.save
+    redirect_to conversation_path(@conversation)
   end
 
   def show
-    @Conversation = Conversation.find(params[:id])
+    @conversation = Conversation.find(params[:id])
+    @message = Message.new
   end
 end

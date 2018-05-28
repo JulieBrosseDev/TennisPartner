@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   def create
+    @conversation = Conversation.find(params[:id])
     @message = Message.new(message_params)
     @message.save
     redirect_to conversation_path(@conversation)
