@@ -18,8 +18,11 @@ class User < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
+  has_many :conversation_users
+  has_many :conversations, through: :conversation_users
   has_many :answers
   has_many :receiver_answers, foreign_key: "receiver_id", class_name: 'Answer'
+
 
   # validates :name, presence: true
   # validates :ranking, presence: true
