@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20180526065726) do
-=======
-ActiveRecord::Schema.define(version: 20180528085919) do
->>>>>>> 933598b3aded0595d8c1e000868585b132496f49
+ActiveRecord::Schema.define(version: 20180528094122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,16 +26,14 @@ ActiveRecord::Schema.define(version: 20180528085919) do
   end
 
   create_table "conversations", force: :cascade do |t|
-    t.integer "receiver_id"
-    t.integer "sender_id"
+    t.bigint "answer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["receiver_id"], name: "index_conversations_on_receiver_id"
-    t.index ["sender_id"], name: "index_conversations_on_sender_id"
+    t.index ["answer_id"], name: "index_conversations_on_answer_id"
   end
 
   create_table "messages", force: :cascade do |t|
-    t.text "body"
+    t.text "content"
     t.bigint "user_id"
     t.bigint "conversation_id"
     t.datetime "created_at", null: false
@@ -81,6 +75,7 @@ ActiveRecord::Schema.define(version: 20180528085919) do
 
   add_foreign_key "answers", "users"
   add_foreign_key "answers", "users", column: "receiver_id"
+  add_foreign_key "conversations", "answers"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
 end
