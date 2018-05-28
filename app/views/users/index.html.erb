@@ -1,38 +1,48 @@
-<div id="viewport">
-  <h2>Change your search criterias</h2>
-  <ul class="stack">
-    <% @users.each do |user|%>
-      <li data-index="<%= user.id %>">
-        <div class="card-picture" style="background-image: url(<%= cl_image_path user.picture unless user.picture.blank?%>);">
-          <div class="card-name-age"> <%= user.name %>, <%= user.age %> </div>
-        </div>
-
-        <h4 class="distance-from-user" >
-          <i class="fas fa-map-marker-alt"></i>
-          <%= Geocoder::Calculations.distance_between([current_user.latitude,current_user.longitude], [user.latitude,user.longitude]).round(1) %>kms
-        </h4>
-
-        <h4 class="card-ranking" >
-          <i class="card-image-rank" > <%= image_tag("ranking.jpeg") %> </i>
-          <%= user.ranking %>
-        </h4>
-
-        <h4 class="description" >
-          <i class="fas fa-info"></i>
-          <%= user.description %>
-        </h4>
-
-        <div class="buttons-like-dislike" >
-          <div class="btn-like-dislike" > <%= simple_form_for @answer do |f| %>
-                  <%= f.hidden_field :receiver_id, :value => user.id %>
-                  <%= f.submit name: "answer[status]", value: "dislike", class: "btn btn-danger btn-dislike-button", id: "dislike-#{user.id}" %>
-                  <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success btn-like-button", id: "like-#{user.id}" %>
-            <% end %>
+<div class="cards-container" >
+  <div id="viewport">
+    <h4 class="card-no-more">It's time to adjust your search criterias :)</h4>
+    <ul class="stack">
+      <% @users.each do |user|%>
+        <li data-index="<%= user.id %>">
+          <div class="card-picture" style="background-image: url(<%= cl_image_path user.picture unless user.picture.blank?%>);">
+            <div class="card-name-age"> <%= user.name %>, <%= user.age %> </div>
           </div>
-        </div>
-      </li>
-    <% end %>
-  </ul>
+
+          <div class="card-info" >
+            <div class="icons-card" >
+              <h6 class="fas fa-map-marker-alt">
+               to <%= Geocoder::Calculations.distance_between([current_user.latitude,current_user.longitude], [user.latitude,user.longitude]).round(1) %> km </h6>
+              <h6 class="fas fa-caret-right" > <%= user.hand %> </h6>
+            </div>
+
+            <h6 class="card-club" >
+              <i class="fas fa-home"></i>
+              <%= user.club %>
+            </h6>
+
+            <h6 class="card-rank">
+              <i class="fas fa-trophy"></i>
+              Ranked <%= user.ranking %>. Very good player !
+            </h6>
+
+            <h6 class="card-description" >
+              <i class="fas fa-info"></i>
+              <%= user.description %>
+            </h6>
+
+          </div>
+          <div class="buttons-like-dislike" >
+            <div class="btn-like-dislike" > <%= simple_form_for @answer do |f| %>
+                    <%= f.hidden_field :receiver_id, :value => user.id %>
+                    <%= f.submit name: "answer[status]", value: "No Way", class: "btn btn-danger btn-dislike-button", id: "dislike-#{user.id}" %>
+                    <%= f.submit name: "answer[status]", value: "Match", class: "btn btn-success btn-like-button", id: "like-#{user.id}" %>
+              <% end %>
+            </div>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
 
 
