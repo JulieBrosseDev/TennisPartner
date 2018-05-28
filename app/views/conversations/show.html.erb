@@ -1,2 +1,8 @@
 <h2>Let's chat and Plan!</h2>
-<p><%= @restaurant.content %></p>
+<div><%= @conversation[:id] %></div>
+<div>
+  <%= simple_form_for (@conversation) do |f| %>
+  <%= f.input @message.content %>
+  <%= f.submit "SEND", class: "btn btn-primary" %>
+  <% end %>
+</div>
