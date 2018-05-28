@@ -45,6 +45,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:name, :ranking, :gender, :age, :address, :picture)
    end
 
+    def after_sign_up_path_for(resource)
+      # redirect_to edit_user_registration_path
+    end
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
   # in to be expired now. This is useful if the user wants to
