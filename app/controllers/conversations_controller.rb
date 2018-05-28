@@ -1,7 +1,7 @@
 class ConversationsController < ApplicationController
   def create
     @answer = Answer.find(params[:id])
-    @conversation = Conversation.new(answer: @answer_id)
+    @conversation = Conversation.new(answer: @answer)
     @conversation.save
     redirect_to conversation_path(@conversation)
   end
