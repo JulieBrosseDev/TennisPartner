@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin-top: 140px;
+  margin-top: 80px;
   margin-left: 150px;
   margin-right: 150px;
 
   p {
     color: #606470;
     font-size: 30px;
+    margin-bottom: 40px;
   }
 }
 
@@ -22,8 +23,8 @@
 .profile-picture {
   background-size: cover;
   background-position: center;
-  height: 220px;
-  width: 220px;
+  height: 150px;
+  width: 150px;
   position: relative;
   overflow: hidden;
   margin-left: 15px;
@@ -31,4 +32,9 @@
   margin-top: -30px;
   border-radius: 50%;
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-warning {
+  margin-top: 100px;
+  margin-left: 100px;
 }
