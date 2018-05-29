@@ -22,5 +22,4 @@ class AnswersController < ApplicationController
   def answer_params
     params.require(:answer).permit(:status, :user_id, :receiver_id)
   end
-
 end
