@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20180529075410) do
     t.index ["user_id"], name: "index_answers_on_user_id"
   end
 
+  create_table "conversation_users", force: :cascade do |t|
+    t.bigint "conversation_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["conversation_id"], name: "index_conversation_users_on_conversation_id"
+    t.index ["user_id"], name: "index_conversation_users_on_user_id"
+  end
+
   create_table "conversations", force: :cascade do |t|
     t.bigint "answer_id"
     t.datetime "created_at", null: false
@@ -70,8 +79,6 @@ ActiveRecord::Schema.define(version: 20180529075410) do
     t.string "picture"
     t.string "hand"
     t.string "club"
-    t.string "provider"
-    t.string "uid"
     t.string "facebook_picture_url"
     t.string "first_name"
     t.string "last_name"
@@ -83,6 +90,8 @@ ActiveRecord::Schema.define(version: 20180529075410) do
 
   add_foreign_key "answers", "users"
   add_foreign_key "answers", "users", column: "receiver_id"
+  add_foreign_key "conversation_users", "conversations"
+  add_foreign_key "conversation_users", "users"
   add_foreign_key "conversations", "answers"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
