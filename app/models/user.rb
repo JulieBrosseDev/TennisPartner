@@ -8,11 +8,10 @@ class User < ApplicationRecord
   DEFAULTS = {
     search_radius: 10,
     opponent_gender: ["male", "female"],
-    opponent_ranking: (1..5),
     name: "No Name",
     address: "",
     gender: "male",
-    ranking: 1,
+    ranking: 2,
     age: "",
     picture: "../../assets/images/default.jpg"
   }.freeze
@@ -39,16 +38,13 @@ class User < ApplicationRecord
   scope :has_answer, ->(user) { joins(:answers).where(answers: { user: user})}
   scope :has_feedback_by, ->(user) {joins(:receiver_answers).merge(Answer.where(user: user))}
   scope :has_no_feedback_by, ->(user) {where.not(id: has_feedback_by(user))}
-  scope :opponent_with_ranking, -> (opponent_ranking) { where(ranking: ((opponent_ranking - 1)..(opponent_ranking + 1))) }
-
-
-
+  scope :opponent_with_ranking, ->(opponent_ranking) { where(ranking: ((opponent_ranking - 1)..(opponent_ranking + 1))) }
 
   scope :displayable_for, ->(user) {
     all_except_me(user)
       .has_no_feedback_by(user)
       .near(user.address, user.safe_search_radius)
-      .opponent_with_ranking(user.opponent_ranking)
+      .opponent_with_ranking(user.opponent_ranking || DEFAULTS[:ranking])
       # .opponent_with_gender(user.opponent_gender)
     }
 
