@@ -1,7 +1,11 @@
 <div class="footer">
   <div class="footer-links">
-    <a href=""><i class="fas fa-search"></i></a>
-    <a href="#"><i class="fas fa-user-circle"></i></a>
+    <%= link_to root_path do %>
+    <i class="fas fa-search"></i>
+    <% end %>
+    <%= link_to edit_user_registration_path do %>
+    <i class="fas fa-user-circle"></i>
+    <% end %>
     <a href="#"><i class="fas fa-comment"></i></i></a>
   </div>
 </div>
