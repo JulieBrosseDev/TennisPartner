@@ -4,18 +4,20 @@
   align-items: center;
   justify-content: space-around;
   color: rgba(0,0,0,0.3);
-  position: sticky;
+  position: fixed;
   width: 100%;
   height: 60px;
-  bottom: 0px;
-  left: 0px;
-  margin-top: 277px;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-spacer {
+  padding-bottom: 80px;
 }
 
 html {
   height: 100%;
 }
-
 
 .footer-links {
   display: flex;
@@ -37,7 +39,3 @@ html {
 .fa-search, .fa-user-circle, .fa-comment {
   color: #F7AA66;
 }
-
-
-
-
