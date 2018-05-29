@@ -34,8 +34,8 @@
           <div class="buttons-like-dislike" >
             <div class="btn-like-dislike" > <%= simple_form_for @answer do |f| %>
                     <%= f.hidden_field :receiver_id, :value => user.id %>
-                    <%= f.submit name: "answer[status]", value: "No Way", class: "btn btn-danger btn-dislike-button", id: "dislike-#{user.id}" %>
-                    <%= f.submit name: "answer[status]", value: "Match", class: "btn btn-success btn-like-button", id: "like-#{user.id}" %>
+                    <%= f.submit name: "answer[status]", value: "dislike", class: "btn btn-danger btn-dislike-button", id: "dislike-#{user.id}" %>
+                    <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success btn-like-button", id: "like-#{user.id}" %>
               <% end %>
             </div>
           </div>
@@ -44,5 +44,6 @@
     </ul>
   </div>
 </div>
+
 
 
