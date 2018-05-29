@@ -34,19 +34,21 @@ class User < ApplicationRecord
   # validates :picture, presence: true
 
   scope :all_except_me, ->(user) { where.not(id: user) }
-  scope :opponent_with_ranking, -> (opponent_ranking) { where(ranking: opponent_ranking) }
   scope :opponent_with_gender, ->(opponent_gender) { where(gender: opponent_gender || DEFAULTS[:opponent_gender]) }
 
   scope :has_answer, ->(user) { joins(:answers).where(answers: { user: user})}
   scope :has_feedback_by, ->(user) {joins(:receiver_answers).merge(Answer.where(user: user))}
   scope :has_no_feedback_by, ->(user) {where.not(id: has_feedback_by(user))}
+  scope :opponent_with_ranking, -> (opponent_ranking) { where(ranking: ((opponent_ranking - 1)..(opponent_ranking + 1))) }
+
+
 
 
   scope :displayable_for, ->(user) {
     all_except_me(user)
       .has_no_feedback_by(user)
       .near(user.address, user.safe_search_radius)
-      # .opponent_with_ranking(user.opponent_ranking)
+      .opponent_with_ranking(user.opponent_ranking)
       # .opponent_with_gender(user.opponent_gender)
     }
 
