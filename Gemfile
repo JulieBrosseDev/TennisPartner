@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.1.6'
 gem 'redis'
 gem 'devise'
+gem 'omniauth-facebook'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
