@@ -47,6 +47,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     def after_sign_up_path_for(resource)
       # redirect_to edit_user_registration_path
+      edit_user_registration_path
     end
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
