@@ -38,6 +38,7 @@
                     <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success btn-like-button", id: "like-#{user.id}" %>
               <% end %>
             </div>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-warning"%>
           </div>
         </li>
       <% end %>

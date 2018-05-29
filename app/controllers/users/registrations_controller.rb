@@ -25,9 +25,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
    DELETE /resource
-   def destroy
-     super
-   end
+  def destroy
+    registration[:user_id] = nil
+    redirect_to root_path
+  end
 
 
   def update
