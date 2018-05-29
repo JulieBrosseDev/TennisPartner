@@ -13,3 +13,10 @@
 @import "components/index";
 @import "pages/index";
 
+
+.bottom-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}

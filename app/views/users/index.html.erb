@@ -32,21 +32,17 @@
               <i class="fas fa-info"></i>
               <%= user.description %>
             </h6>
+          </div>
 
-          </div>
-          <div class="buttons-like-dislike" >
-            <div class="btn-like-dislike" > <%= simple_form_for @answer do |f| %>
-                    <%= f.hidden_field :receiver_id, :value => user.id %>
-                    <%= f.submit name: "answer[status]", value: "dislike", class: "btn btn-danger btn-dislike-button", id: "dislike-#{user.id}" %>
-                    <%= f.submit name: "answer[status]", value: "like", class: "btn btn-success btn-like-button", id: "like-#{user.id}" %>
-              <% end %>
+          <%= simple_form_for @answer do |f| %>
+            <div class="bottom-buttons">
+              <%= f.hidden_field :receiver_id, :value => user.id %>
+              <%= f.button :button, "Let's go!", type: :submit, name: "answer[status]", value: "dislike", class: "btn btn-danger", id: "dislike-#{user.id}" %>
+              <%= f.button :button, "No Way!", type: :submit, name: "answer[status]", value: "like", class: "btn btn-success", id: "like-#{user.id}" %>
             </div>
-          </div>
+          <% end %>
         </li>
       <% end %>
     </ul>
   </div>
 </div>
-
-
-
