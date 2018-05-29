@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   mount_uploader :picture, PictureUploader
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+
+ devise :database_authenticatable, :registerable,
+        :recoverable, :rememberable, :trackable, :validatable
 
   DEFAULTS = {
     search_radius: 10,
