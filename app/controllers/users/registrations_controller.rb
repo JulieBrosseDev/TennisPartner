@@ -38,18 +38,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
       flash[:error] = current_user.errors.full_messages
       render :edit
    end
- end
+  end
 
 
-   private
+  private
 
-   def user_params
+  def user_params
     params.require(:user).permit(:name, :ranking, :gender, :age, :address, :picture)
-   end
+  end
 
-    def after_sign_up_path_for(resource)
-      edit_user_registration_path
-    end
+  def after_sign_up_path_for(resource)
+    edit_user_registration_path
+  end
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
   # in to be expired now. This is useful if the user wants to
