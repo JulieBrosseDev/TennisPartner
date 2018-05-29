@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   mount_uploader :picture, PictureUploader
 
- devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :trackable, :validatable
- devise :omniauthable, omniauth_providers: [:facebook]
+  devise :omniauthable, omniauth_providers: [:facebook]
 
   DEFAULTS = {
     search_radius: 10,
