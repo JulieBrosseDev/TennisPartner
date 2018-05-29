@@ -1,6 +1,7 @@
 class ConversationsController < ApplicationController
   def create
     @answer = Answer.find(params[:answer_id])
+    byebug
     @conversation = Conversation.new()
     @conversation.users << @answer.user << @answer.receiver
     @conversation.save
