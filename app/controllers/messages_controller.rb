@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   def create
-    @conversation = Conversation.find(params[:id])
-    @message = Message.new(message_params)
+    @conversation = Conversation.find(params[:conversation_id])
+    @message = @conversation.messages.new(message_params.merge(user:current_user))
     @message.save
     redirect_to conversation_path(@conversation)
   end

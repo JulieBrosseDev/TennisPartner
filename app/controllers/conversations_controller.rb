@@ -4,7 +4,7 @@ class ConversationsController < ApplicationController
     @conversation = Conversation.new()
     @conversation.users << @answer.user << @answer.receiver
     @conversation.save
-    redirect_to answer_conversations_path(@answer)
+    redirect_to conversation_path(@conversation)
   end
 
   def show
