@@ -6,6 +6,7 @@
         <li data-index="<%= user.id %>">
           <div class="card-picture" style="background-image: url(<%= cl_image_path user.picture unless user.picture.blank?%>);">
             <div class="card-name-age"> <%= user.name %>, <%= user.age %> </div>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-warning"%>
           </div>
 
           <div class="card-info" >

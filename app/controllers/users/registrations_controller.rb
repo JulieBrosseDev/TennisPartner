@@ -24,31 +24,32 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    registration[:user_id] = nil
+    redirect_to root_path
+  end
+
+
   def update
     if current_user.update(user_params)
       flash[:success] = 'Your profile has been updated.'
       redirect_to root_path
     else
-      current_user.errors.full_messages
       flash[:error] = current_user.errors.full_messages
       render :edit
    end
- end
+  end
 
-   private
 
-   def user_params
+  private
+
+  def user_params
     params.require(:user).permit(:name, :ranking, :gender, :age, :address, :picture)
-   end
+  end
 
-    def after_sign_up_path_for(resource)
-      # redirect_to edit_user_registration_path
-      edit_user_registration_path
-    end
+  def after_sign_up_path_for(resource)
+    edit_user_registration_path
+  end
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
   # in to be expired now. This is useful if the user wants to
