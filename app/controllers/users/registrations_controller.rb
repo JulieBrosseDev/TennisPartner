@@ -24,10 +24,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # DELETE /resource
-  # def destroy
-  #   super
-  # end
+   DELETE /resource
+  def destroy
+    registration[:user_id] = nil
+    redirect_to root_path
+  end
+
+
   def update
     if current_user.update(user_params)
       flash[:success] = 'Your profile has been updated.'
@@ -39,6 +42,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    end
  end
 
+
    private
 
    def user_params
@@ -46,7 +50,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    end
 
     def after_sign_up_path_for(resource)
-      # redirect_to edit_user_registration_path
+      redirect_to edit_profile_path
     end
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
