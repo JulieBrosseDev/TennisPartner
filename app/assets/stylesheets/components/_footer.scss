@@ -1,8 +1,5 @@
 .footer {
   background: #F4F4F4;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   color: rgba(0,0,0,0.3);
   position: fixed;
   width: 100%;
@@ -20,22 +17,27 @@ html {
 }
 
 .footer-links {
+  padding: 0 30px;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
+
 .footer-links a {
-  color: black;
   opacity: 0.40;
   text-decoration: none;
   font-size: 40px;
-  padding: 0px 40px;
-  align-items: center;
-
 }
+
 .footer-links a:hover {
   opacity: 1;
 }
 
 .fa-search, .fa-user-circle, .fa-comment {
   color: #F7AA66;
+}
+
+.fa-search.active, .fa-user-circle.active, .fa-comment.active {
+  color: red;
 }
