@@ -6,11 +6,11 @@
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>
       <div class="form-inputs">
-        <%= f.input :name, required: true %>
-        <%= f.input :age, required: true %>
+        <%= f.input :name, required: true, input_html: { value: current_user.name } %>
+        <%= f.input :age, required: true, input_html: { value: current_user.age } %>
         <%= f.input :ranking, autocomplete: "off", hint: "Choose your ranking from 0 to 5", required: true, collection: 0 .. 5 %>
         <%= f.input :address, label: false, input_html: { id: "button-autocomplete" }, required: true %>
-        <%= f.input :picture %>
+        <%= f.input :picture, input_html: { value: current_user.picture } %>
         <%= f.input :picture_cache, as: :hidden %>
       </div>
 
