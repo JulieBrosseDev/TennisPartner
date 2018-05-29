@@ -6,11 +6,15 @@
   color: rgba(0,0,0,0.3);
   position: sticky;
   width: 100%;
-  height: 50px;
+  height: 60px;
   bottom: 0px;
   left: 0px;
+  margin-top: 270px;
 }
 
+html {
+  height: 100%;
+}
 
 
 .footer-links {
@@ -33,16 +37,6 @@
 .fa-search, .fa-user-circle, .fa-comment {
   color: #F7AA66;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
