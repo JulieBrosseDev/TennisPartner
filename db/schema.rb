@@ -75,7 +75,6 @@ ActiveRecord::Schema.define(version: 20180529075410) do
     t.integer "search_radius"
     t.float "latitude"
     t.float "longitude"
-    t.string "photo"
     t.string "picture"
     t.string "hand"
     t.string "club"
