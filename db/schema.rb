@@ -78,8 +78,6 @@ ActiveRecord::Schema.define(version: 20180529075410) do
     t.string "picture"
     t.string "hand"
     t.string "club"
-    t.string "provider"
-    t.string "uid"
     t.string "facebook_picture_url"
     t.string "first_name"
     t.string "last_name"

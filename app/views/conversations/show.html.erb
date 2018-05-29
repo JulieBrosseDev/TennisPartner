@@ -1,8 +1,17 @@
-<h2>Let's chat and Plan!</h2>
-<div><%= @conversation.messages %></div>
-<div>
+<h2 class="title-chat text-center">Let's chat and Plan!</h2>
+<div class="message-list-container">
+  <% @conversation.messages.each do |message| %>
+    <% if message.user_id == current_user.id%>
+      <div class="text-right green-text"><%= message.content %></div>
+    <% else %>
+        <div class="text-left orange-text" ><%= message.content %></div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="message-input">
   <%= simple_form_for([@conversation, @message]) do |f| %>
-  <%= f.input :content %>
+  <%= f.input :content, label: "Your message" %>
   <%= f.submit "SEND", class: "btn btn-primary" %>
   <% end %>
 </div>

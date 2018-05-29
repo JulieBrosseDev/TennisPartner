@@ -1,0 +1,38 @@
+.title-chat {
+  color: white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.message-list-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8f4eb;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.green-text {
+  color: #00503c;
+}
+
+.orange-text {
+  color: #bf6516;
+}
+
+.message-input {
+  .btn-primary {
+    margin-top: 1px;
+    margin-bottom: 10px;
+
+  }
+}
+
+.message-content {
+  .form-control {
+    background-color: #e8f4eb;
+    opacity: 0;
+  }
+}
