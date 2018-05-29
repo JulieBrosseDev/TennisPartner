@@ -8,6 +8,10 @@
       <div class="form-inputs">
         <%= f.input :name, required: true, input_html: { value: current_user.name } %>
         <%= f.input :age, required: true, input_html: { value: current_user.age } %>
+        <%= f.input :gender, required: true, collection: ["male", "female"] %>
+        <%= f.input :hand, required: true, collection: ["Left Handed", "Right Handed"] %>
+        <%= f.input :club, required: true %>
+        <%= f.input :description, required: true %>
         <%= f.input :ranking, collection: [["1 - Novice", 1],["2 - Beginner", 2], ["3 - Intermediate", 3], ["4 - Advanced", 4], ["5 - Expert", 5]], required: true %>
         <%= f.input :address, input_html: { id: "button-autocomplete" }, required: true %>
         <%= f.input :picture, input_html: { value: current_user.picture } %>
@@ -15,14 +19,16 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Update" %>
+        <%= f.button :submit, "Update", class: "btn btn-success" %>
       </div>
     </div>
   </div>
     <% end %>
-  <h3>Cancel my account</h3>
+    <div class="cancel">
+      <h3>Cancel my account</h3>
 
-  <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-  <%= link_to "Back", :back %>
+      <%= link_to "Back", :back %>
+    </div>
 </div>

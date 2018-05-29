@@ -4,10 +4,11 @@
 
 .form-control-label {
   font-weight: bold;
+  color: white;
 }
 
 .criteria-title {
-  color: #ff7100;
+  color: white;
   font-size: 28px;
   font-weight: bold;
 }
@@ -18,7 +19,7 @@
 
 .card-form {
   padding: 8px;
-  background-color: #e5e5e5;
+  background-color: #D9713B;
   border-radius: 3px;
 }
 
@@ -27,6 +28,33 @@
 }
 
 .form-control {
-  padding: 0px 12px;
+  padding: 0px 10px;
+  background-color: #f9f9f9;
+  height: 25px;
 }
 
+body {
+  background-color: #00503c;
+}
+
+label {
+  color: white;
+}
+
+
+.form-text {
+  color: white;
+  font-style: italic;
+}
+
+.btn-light {
+  background-color: yellow;
+}
+
+.cancel {
+  color: white;
+  text-align: center;
+  a {
+    color: yellow;
+  }
+}

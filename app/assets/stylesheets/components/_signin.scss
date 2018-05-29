@@ -1,10 +1,4 @@
-h2 {
-  text-align: center;
-}
 
-p {
-  text-align: center;
-}
 
 
 
@@ -19,5 +13,19 @@ p {
   height: 140px;
   width: 300px;
     object-fit: cover;
+  }
+}
+
+.infos-signin {
+  h2 {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  }
+
+  p {
+  text-align: center;
+  color: white;
   }
 }
