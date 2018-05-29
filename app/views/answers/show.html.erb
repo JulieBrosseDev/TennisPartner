@@ -1,16 +1,19 @@
 <div class="container">
-    <h2 id="match-title">It's a match!</h2>
+  <h2 id="match-title">It's a match!</h2>
   <div class="match">
     <div class="card-match">
-    <p><%= current_user.name %></p>
-      <div class="profile-picture" style="background-image: url(<%= cl_image_path current_user.picture %>);"> </div>
+      <p><%= current_user.name %></p>
+      <div class="profile-picture" style="background-image: url(<%= cl_image_path current_user.picture %>);">
+      </div>
     </div>
-        <div class="card-match">
 
-     <p><%= @answer.receiver.name %></p>
-     <div class="profile-picture" style="background-image: url(<%= cl_image_path @answer.receiver.picture %>);"> </div>
-   </div>
+    <div class="card-match">
+      <p><%= @answer.receiver.name %></p>
+      <div class="profile-picture" style="background-image: url(<%= cl_image_path @answer.receiver.picture %>);">
+      </div>
+    </div>
   </div>
+
   <%= link_to "Keep swiping", root_path, class: "btn btn-warning" %>
   <%= link_to "Message your new bro!", conversation_path(@conversation), class: "btn btn-warning" %>
 </div>
