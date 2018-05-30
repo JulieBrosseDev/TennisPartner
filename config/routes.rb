@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :answers, only:[:create, :show] do
     resources :conversations, only: :create
   end
-  resources :conversations, only: :show do
+  resources :conversations, only: [:show, :index] do
     resources :messages, only: :create
   end
   delete '/logout' => 'registrations#destroy'
