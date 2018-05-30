@@ -33,7 +33,7 @@ class User < ApplicationRecord
   # validates :picture, presence: true
 
   scope :all_except_me, ->(user) { where.not(id: user) }
-  scope :opponent_with_gender, ->(opponent_gender) { opponent_gender == 'Both' ? all : where(gender: opponent_gender || DEFAULTS[:opponent_gender]) }
+  scope :opponent_with_gender, ->(opponent_gender) { opponent_gender == 'both' ? all : where(gender: opponent_gender || DEFAULTS[:opponent_gender]) }
 
   scope :has_answer, ->(user) { joins(:answers).where(answers: { user: user})}
   scope :has_feedback_by, ->(user) {joins(:receiver_answers).merge(Answer.where(user: user))}
@@ -45,7 +45,7 @@ class User < ApplicationRecord
       .has_no_feedback_by(user)
       .near(user.address, user.safe_search_radius)
       .opponent_with_ranking(user.opponent_ranking || DEFAULTS[:ranking])
-      # .opponent_with_gender(user.opponent_gender)
+      #.opponent_with_gender(user.opponent_gender)
     }
 
   def self.find_for_facebook_oauth(auth)
