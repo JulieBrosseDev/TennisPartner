@@ -16,6 +16,7 @@
     <%#= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
+    <div class="footer-spacer"></div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= ENV['GOOGLE_API_KEY'] %>"></script>
