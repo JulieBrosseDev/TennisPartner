@@ -24,7 +24,7 @@ html {
 }
 
 .footer-links a {
-  opacity: 0.40;
+  opacity: 0.50;
   text-decoration: none;
   font-size: 40px;
 }
@@ -37,6 +37,24 @@ html {
   color: #F7AA66;
 }
 
+.fa-search, .fa-user-circle {
+  margin-bottom: 19px;
+}
+
 .fa-search.active, .fa-user-circle.active, .fa-comment.active {
   color: #D9713B;
+}
+
+.badge {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 48px;
+  right: -23px;
+  background-color: red;
+  font-size: 14px;
 }

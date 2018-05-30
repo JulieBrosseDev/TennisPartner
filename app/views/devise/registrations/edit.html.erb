@@ -1,6 +1,6 @@
 <div class="container">
   <div class="criteria-title">
-    <h4> Wait a second ! We need some information about you :)</h4>
+    <p> Wait a second ! We need some information about you :)</p>
   </div>
   <div class="card-form">
    <div class="card-criteria">
@@ -9,7 +9,7 @@
       <div class="form-inputs">
         <%= f.input :name, required: true, input_html: { value: current_user.name } %>
         <%= f.input :age, required: true, input_html: { value: current_user.age } %>
-        <%= f.input :gender, required: true, collection: ["both", "male", "female"] %>
+        <%= f.input :gender, required: true, collection: ["male", "female"] %>
         <%= f.input :hand, required: true, collection: ["Left Handed", "Right Handed"] %>
         <%= f.input :club, required: true %>
         <%= f.input :description, required: true %>

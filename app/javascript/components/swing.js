@@ -1,7 +1,16 @@
 import { Stack } from "swing";
 function initSwing() {
   document.addEventListener("DOMContentLoaded", function() {
-    const stack = new Stack();
+    const stack = new Stack({
+      throwOutConfidence: (xOffset, yOffset, element) => {
+        const xConfidence = Math.abs(xOffset) / element.offsetWidth;
+        if (xConfidence > 0.4) {
+          return 1;
+        } else {
+          return xConfidence;
+        }
+      }
+    });
     const cards = document.querySelectorAll(".stack li");
 
     const cleanCard = (e) => {

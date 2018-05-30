@@ -1,6 +1,3 @@
-<h1>My conversations</h1>
 <% @conversations.each do |conversation| %>
-  <h2><%= "Moi et" + conversation.receiver %></h2>
-  <p><%= conversation.content %></p>
-  <%= f.submit "Détails", class: "btn btn-primary" %>
+<%= conversation %>
 <% end %>

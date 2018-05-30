@@ -2,11 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content = "width=device-width, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, user-scalable = no" />
+    <meta name="apple-mobile-web-app-title" content="Tennis" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <title>TENNIS-NOW</title>
-    <%= favicon_link_tag asset_path('tennis.png'), :rel => 'icon', :type =>  'image/png' %>
+    <title>Tennis Now</title>
+    <%= favicon_link_tag asset_path('TN_icone.png'), :rel => 'icon', :type =>  'image/png' %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
@@ -21,7 +24,30 @@
     <%= javascript_pack_tag 'application' %>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= ENV['GOOGLE_API_KEY'] %>"></script>
     <%= javascript_pack_tag "map" %>
+    <script>
+      if(("standalone" in window.navigator) && window.navigator.standalone){
 
+  // If you want to prevent remote links in standalone web apps opening Mobile Safari, change 'remotes' to true
+  var noddy, remotes = false;
+
+  document.addEventListener('click', function(event) {
+
+    noddy = event.target;
+
+    // Bubble up until we hit link or top HTML element. Warning: BODY element is not compulsory so better to stop on HTML
+    while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+          noddy = noddy.parentNode;
+      }
+
+    if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+    {
+      event.preventDefault();
+      document.location.href = noddy.href;
+    }
+
+  },false);
+}
+    </script>
   </body>
 
 </html>

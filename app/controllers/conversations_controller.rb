@@ -1,5 +1,4 @@
 class ConversationsController < ApplicationController
-
   def create
     @answer = Answer.find(params[:answer_id])
     @conversation = Conversation.new()
