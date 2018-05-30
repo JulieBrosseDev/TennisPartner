@@ -34,13 +34,13 @@
             </h6>
 
           </div>
-             <%= simple_form_for @answer do |f| %>
-                <div class="bottom-buttons">
-                  <%= f.hidden_field :receiver_id, :value => user.id %>
-                  <%= f.button :button, "No Way!", type: :submit, name: "answer[status]", value: "dislike", class: "btn btn-danger", id: "dislike-#{user.id}" %>
-                  <%= f.button :button, "Let's go!", type: :submit, name: "answer[status]", value: "like", class: "btn btn-success", id: "like-#{user.id}" %>
-                </div>
-             <% end %>
+          <%= simple_form_for @answer do |f| %>
+            <div class="bottom-buttons">
+              <%= f.hidden_field :receiver_id, :value => user.id %>
+              <%= f.button :button, "No Way!", type: :submit, name: "answer[status]", value: "dislike", class: "btn btn-danger", id: "dislike-#{user.id}" %>
+              <%= f.button :button, "Let's go!", type: :submit, name: "answer[status]", value: "like", class: "btn btn-success", id: "like-#{user.id}" %>
+            </div>
+          <% end %>
         </li>
       <% end %>
     </ul>
