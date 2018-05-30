@@ -1,0 +1,26 @@
+<div class="container-profile" >
+  <div class="prof-picture">
+    <div class="profile-picture2" style="background-image: url(<%= cl_image_path current_user.picture %>);"></div>
+  </div>
+  <div class="card-name-age1"> <%= current_user.name %>, <%= current_user.age %> </div>
+  <div class="icon-profile" >
+    <%= link_to edit_user_registration_path do %>
+      <i class="fas fa-cog"></i>
+    <% end %>
+    <%= link_to edit_criteria_path(current_user) do %>
+      <i class="fas fa-pencil-alt"></i>
+    <% end %>
+  </div>
+  <div class="txt-profile" >
+    <h7>Edit your profile</h7>
+    <h7>Edit your search </h7>
+  </div>
+  <div class="logout-profile" >
+    <a class="lgout">
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    </a>
+  </div>
+</div>
+
+
+
