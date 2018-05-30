@@ -17,6 +17,10 @@
   position: relative;
 }
 
+.fa-cog, .fa-pencil-alt {
+  color: #D9713B;
+}
+
 .icon-profile {
   margin-top: 40px;
   display: flex;
@@ -32,7 +36,6 @@
   font-size: 15px;
 }
 
-
 .card-name-age1 {
   margin-top: 10px;
   color: white;
@@ -40,11 +43,15 @@
 }
 
 .lgout {
-  display: flex;
+  margin-top: 200px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.logout-profile {
+  display:flex;
   justify-content: center;
   margin-top: 200px;
-  color: #F4F4F4;
-  text-decoration: none;
 }
 
 
