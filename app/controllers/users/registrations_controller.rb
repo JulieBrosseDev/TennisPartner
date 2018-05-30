@@ -44,7 +44,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
 
   def user_params
-    params.require(:user).permit(:name, :ranking, :gender, :age, :address, :picture)
+    params.require(:user).permit(:name, :ranking, :gender, :age, :address, :picture, :hand, :description, :club)
   end
 
   def after_sign_up_path_for(resource)
