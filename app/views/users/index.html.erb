@@ -32,8 +32,8 @@
               <i class="fas fa-info"></i>
               <%= user.description %>
             </h6>
-
           </div>
+
           <%= simple_form_for @answer do |f| %>
             <div class="bottom-buttons">
               <%= f.hidden_field :receiver_id, :value => user.id %>
@@ -46,6 +46,3 @@
     </ul>
   </div>
 </div>
-
-
-
