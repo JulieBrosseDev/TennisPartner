@@ -4,7 +4,7 @@
      <div class="card-criteria">
         <%= simple_form_for @user, url: criteria_path(@user), method: :patch do |f| %>
         <%= f.input :opponent_ranking, collection: [["1 - Never played before", 1],["2 - Beginner", 2], ["3 - Intermediate", 3], ["4 - Advanced", 4], ["5 - Expert", 5]] %>
-        <%= f.input :opponent_gender, as: :select, collection: ["male", "female"] %>
+        <%= f.input :opponent_gender, as: :select, collection: ["male", "female", "both"] %>
         <%= f.input :search_radius, hint: "Choose your radius from 0 to 50km" %>
         <%= f.button :submit, "Update", class: "btn btn-success" %>
       <% end %>
