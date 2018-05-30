@@ -1,0 +1,52 @@
+.profile-picture2 {
+  background-size: cover;
+  display: bloc;
+  background-position: center;
+  height: 180px;
+  width: 180px;
+  overflow: hidden;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-profile {
+  margin-top: 30px;
+  position: relative;
+}
+
+.icon-profile {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  color: #D9713B;
+  font-size: 30px;
+}
+
+.txt-profile {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-size: 15px;
+}
+
+
+.card-name-age1 {
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+}
+
+.lgout {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  color: #F4F4F4;
+  text-decoration: none;
+}
+
+
+
+
