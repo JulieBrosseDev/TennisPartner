@@ -39,6 +39,11 @@ class User < ApplicationRecord
   scope :has_feedback_by, ->(user) {joins(:receiver_answers).merge(Answer.where(user: user))}
   scope :has_no_feedback_by, ->(user) {where.not(id: has_feedback_by(user))}
   scope :opponent_with_ranking, ->(opponent_ranking) { where(ranking: ((opponent_ranking - 1)..(opponent_ranking + 1))) }
+  scope :interlocutors, -> (conversation, current_user) {
+    joins(:conversation_users)
+    .where(conversation_users: {conversation_id: conversation.id})
+    .all_except_me(current_user)
+  }
 
   scope :displayable_for, ->(user) {
     all_except_me(user)
