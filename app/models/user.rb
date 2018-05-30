@@ -45,7 +45,7 @@ class User < ApplicationRecord
       .has_no_feedback_by(user)
       .near(user.address, user.safe_search_radius)
       .opponent_with_ranking(user.opponent_ranking || DEFAULTS[:ranking])
-      .opponent_with_gender(user.opponent_gender)
+      # .opponent_with_gender(user.opponent_gender)
     }
 
   def self.find_for_facebook_oauth(auth)
