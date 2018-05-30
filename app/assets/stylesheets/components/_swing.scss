@@ -1,9 +1,10 @@
-
-.card-no-more{
+.viewport > h4 {
   display: flex;
   text-align: center;
   justify-content: center;
   margin-top: 280px;
+  color: white;
+  font-weight: bolder;
 }
 
 .card-picture {
@@ -26,7 +27,18 @@
   font-weight: bold;
 }
 
-.card-club, .card-rank {
+.background-shadow {
+  background-color: #f4f9f4;
+  background-size: cover;
+  justify-content: center;
+  margin: 5px;
+  padding: 2px;
+  line-height: 2;
+  h6 {
+    margin-left: 0;
+  }
+}
+.card-rank {
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -40,15 +52,19 @@
 
 .icons-card  {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 10px;
   font-family: 'Ubuntu', sans-serif;
-
 }
+
 
 
 .card-info {
   margin-top: 15px;
   font-size: 14px;
+  font-family: poppins;
+  font-weight: bold;
+  font-color: #2a2a2a;
 }
 
 .card-image-rank {
@@ -159,6 +175,28 @@ img {
   padding-left: 47px;
   padding-right:47px;
   border-radius: 5px;
+}
+
+.bottom-buttons {
+  display: flex;
+  padding-top: 30px;
+  margin-bottom: 80px;
+  padding: 0 5px;
+  justify-content: space-between;
+
+  .btn-success{
+    background-color: #00503C ;
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    width: 100px;
+  }
+
+  .btn-danger {
+    background-color: #D9713B ;
+    border-radius: 5px;
+    border: none;
+  }
 }
 
 #viewport li.in-deck .btn-like-button {
