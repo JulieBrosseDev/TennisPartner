@@ -1,40 +1,43 @@
 <div class="cards-container" >
   <div id="viewport">
-    <h4 class="card-no-more">It's time to adjust your search criterias :)</h4>
+    <h4>It's time to adjust your search criterias :)</h4>
+
     <ul class="stack">
       <% @users.each do |user|%>
         <li data-index="<%= user.id %>">
           <div class="card-picture" style="background-image: url(<%= cl_image_path user.picture unless user.picture.blank?%>);">
-            <div class="card-name-age"> <%= user.name %>, <%= user.age %> </div>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-warning"%>
+            <div class="card-name-age"> <%= user.name %>, <%= user.age %>
+            </div>
           </div>
 
           <div class="card-info" >
             <div class="icons-card" >
               <div>
-              <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-map-marker-alt"></i>
                to <%= Geocoder::Calculations.distance_between([current_user.latitude,current_user.longitude], [user.latitude,user.longitude]).round(1) %> km
-              </div>
+                </div>
               <div>
-              <i class="fas fa-caret-right" ></i>
-              <%= user.hand %>
+                <i class="fas fa-caret-right" ></i>
+                <%= user.hand %>
               </div>
             </div>
 
-            <h6 class="card-club" >
+            <div class="background-shadow">
               <i class="fas fa-home"></i>
               <%= user.club %>
-            </h6>
+            </div>
 
-            <h6 class="card-rank">
+            <div class="card-rank">
               <i class="fas fa-trophy"></i>
               Ranking: <%= user.ranking %>
-            </h6>
+            </div>
 
-            <h6 class="card-description" >
-              <i class="fas fa-info"></i>
-              <%= user.description %>
-            </h6>
+            <div class="background-shadow">
+              <h6 class="card-description" >
+                <i class="fas fa-info"></i>
+                <%= user.description %>
+              </h6>
+            </div>
           </div>
 
           <%= simple_form_for @answer do |f| %>
