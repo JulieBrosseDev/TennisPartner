@@ -12,6 +12,7 @@
   margin-left: 10px;
   padding: 10px;
   border-radius: 5px;
+  font-size: 12px;
 }
 
 .green-text {
@@ -23,10 +24,17 @@
 }
 
 .message-input {
+  text-align: center;
+  padding: 0 5px;
+  border-radius: 5px;
   .btn-primary {
+    background-color: #D9713B;
+    border-color: #D9713B;
+    border-radius: 50px;
     margin-top: 1px;
     margin-bottom: 10px;
-
+    font-size: 14px;
+    width: 90px;
   }
 }
 
@@ -34,5 +42,7 @@
   .form-control {
     background-color: #e8f4eb;
     opacity: 0;
+    font-size: 12px;
   }
 }
+
