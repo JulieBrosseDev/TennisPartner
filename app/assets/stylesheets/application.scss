@@ -10,6 +10,9 @@
 @import "font-awesome";
 // Your CSS partials
 @import "layouts/index";
+@import "components/index";
+@import "pages/index";
+
 
 .bottom-buttons {
   display: flex;
@@ -17,4 +20,5 @@
   padding-top: 30px;
   padding-bottom: 50px;
 }
+
 
