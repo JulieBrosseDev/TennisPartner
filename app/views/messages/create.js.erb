@@ -1,0 +1,13 @@
+function resetForm() {
+  const messageForm = document.querySelector('#message_content');
+  messageForm.value = ''
+}
+
+function addMessage(messageHTML) {
+  const messages = document.querySelector('.message-list-container');
+  messages.insertAdjacentHTML('beforeend', messageHTML);
+}
+resetForm();
+addMessage('<%= j render "messages/message", message: @message, user_is_messages_author: true %>');
+
+
