@@ -1,0 +1,14 @@
+<% if local_assigns.has_key? :user_is_messages_author %>
+  <% if user_is_messages_author %>
+    <div class="text-right green-text"><%= message.content %></div>
+  <% else %>
+    <div class="text-left orange-content" ><%= message.content %> </div>
+  <% end %>
+<% else %>
+  <% if message.user_id == current_user.id%>
+    <div class="text-right green-text"><%= message.content %></div>
+  <% else %>
+    <div class="text-left orange-content" ><%= message.content %> </div>
+  <% end %>
+<% end %>
+
