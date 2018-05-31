@@ -4,7 +4,13 @@
     <% if message.user_id == current_user.id%>
       <div class="text-right green-text"><%= message.content %></div>
     <% else %>
-        <div class="text-left orange-text" ><%= message.content %></div>
+      <div class="message-left-content">
+        <div class="text-left orange-text" >
+          <div class="profile-picture-message" style="background-image: url(<%= cl_image_path current_user.picture %>);">
+          </div>
+          <div class="message-content" ><%= message.content %> </div>
+        </div>
+      </div>
     <% end %>
   <% end %>
 </div>
