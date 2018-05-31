@@ -33,7 +33,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def update
     if current_user.update(user_params)
       flash[:success] = 'Your profile has been updated.'
-      redirect_to root_path
+      redirect_to profile_path
     else
       flash[:error] = current_user.errors.full_messages
       render :edit

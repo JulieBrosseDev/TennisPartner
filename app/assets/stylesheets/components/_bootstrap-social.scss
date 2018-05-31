@@ -15,7 +15,7 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
 .btn-social {
   position: relative;
   padding-left: ($bs-height-base + $padding-base-horizontal);
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -113,3 +113,28 @@ $bs-height-xs:   (floor($font-size-small * 1.2) + $padding-small-vertical + 1) !
 .btn-vimeo         { @include btn-social(#1ab7ea); }
 .btn-vk            { @include btn-social(#587ea3); }
 .btn-yahoo { @include btn-social(#720e9e); }
+
+
+.btn-fb {
+ background-color: #3b5998;
+ border: none;
+ padding-top: 8px;
+ padding-bottom: 8px;
+ padding-left: 48px;
+ padding-right: 48px;
+ width: auto;
+ color: white;
+ display: inline-block;
+ text-align: center;
+ font-size: 11px;
+ font-weight: bold;
+ text-decoration: none;
+ margin-top: 20px;
+}
+
+.btn-signup {
+  color: white;
+  font-size: 20px;
+  margin-top: 15px;
+}
+

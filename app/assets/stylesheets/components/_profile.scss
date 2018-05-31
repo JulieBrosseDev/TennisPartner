@@ -15,6 +15,22 @@
 .container-profile {
   margin-top: 30px;
   position: relative;
+
+  p {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+  }
+
+  a {
+    height: 30px;
+  }
+
+  i {
+    margin-bottom: 5px;
+  }
 }
 
 .fa-cog, .fa-pencil-alt {
@@ -22,7 +38,7 @@
 }
 
 .icon-profile {
-  margin-top: 40px;
+  margin-top: 35px;
   display: flex;
   justify-content: space-around;
   color: #D9713B;
@@ -51,7 +67,17 @@
 .logout-profile {
   display:flex;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 150px;
+
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #D9713B;
+  }
 }
 
 
