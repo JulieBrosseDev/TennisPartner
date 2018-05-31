@@ -1,3 +1,0 @@
-<% @conversations.each do |conversation| %>
-  <%= User.interlocutors(conversation, current_user).pluck(:name).join(", ") %>
-<% end %>
