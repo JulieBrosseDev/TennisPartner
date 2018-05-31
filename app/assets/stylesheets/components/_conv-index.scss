@@ -1,6 +1,6 @@
 .index-conv-title {
   color: white;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -12,16 +12,28 @@
   text-align: center;
 }
   img {
-    height: 150px;
-    margin-bottom: 30px;
+    height: 100px;
+    bottom: 100px;
   }
 
 .each-conv {
   text-align: center;
   position: relative;
-  background-color: rgb(240, 240, 240);
+  background-color: rgba(240, 240, 240, 0.8);
   margin: 20px;
   border-radius: 5px;
+
+  .conv-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+.each-conv :hover {
+  color: red;
+  }
 
   img {
     width: 50px;
@@ -31,10 +43,6 @@
     top: -10px;
     left: -10px;
   }
-}
-
-#avatar-conv {
-
 }
 
 .date-indicator {

@@ -6,7 +6,6 @@
 
   <div class="all-conv">
       <% @conversations.each do |conversation| %>
-      <div class="xs-col-6">
         <div class="each-conv">
           <div id="avatar-conv">
             <%= cl_image_tag("#{conversation.users.first.picture}")%>
@@ -18,11 +17,11 @@
             </div>
 
             <div class="date-indicator">
-              <%= conversation.messages.last.created_at %>
+              <%= l(conversation.messages.last.created_at, format: :long) %>
             </div>
           </div>
+          <%= link_to "", conversation_path(conversation), class: "conv-link" %>
         </div>
-      </div>
       <%end%>
     <%= cl_image_tag("TN_icone.png") %>
   </div>
