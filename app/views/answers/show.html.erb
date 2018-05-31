@@ -1,5 +1,5 @@
 <div class="container">
-  <p id="match-title">It's a match!</p>
+  <p class="page-title">It's a match!</p>
   <div class="logo-tn">
     <%= cl_image_tag("TN_icone.png") %>
   </div>
@@ -9,14 +9,14 @@
       <div class="card-match">
         <div class="profile-picture" style="background-image: url(<%= cl_image_path current_user.picture %>);">
         </div>
-        <p><%= current_user.name %></p>
+        <p class="name-font"><%= current_user.name %></p>
       </div>
 
 
       <div class="card-match">
         <div class="profile-picture" style="background-image: url(<%= cl_image_path @answer.receiver.picture %>);">
         </div>
-        <p><%= @answer.receiver.name %></p>
+        <p class="name-font"><%= @answer.receiver.name %></p>
       </div>
     </div>
   </div>
@@ -26,6 +26,3 @@
       <%= link_to "Message your new bro!", answer_conversations_path(@answer), method: :post, class: "btn btn-warning" %>
     </div>
 </div>
-
-
-
