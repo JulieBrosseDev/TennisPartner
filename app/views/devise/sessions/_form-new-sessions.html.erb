@@ -1,10 +1,9 @@
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <%= f.input :email, required: false, autofocus: true %>
         <%= f.input :password, required: false %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
 
       <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
+        <%= f.button :submit, "Log in", class: "btn btn-warning"%>
       </div>
     </div>
 <% end %>

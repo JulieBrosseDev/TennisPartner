@@ -5,15 +5,37 @@
 
 .container-signin {
   font-size: 12px;
+  text-align: center;
+  color: white;
+
+  p {
+    font-size: 34px;
+    font-weight: bolder;
+  }
 }
 
 .carousel {
 
   & img {
-  height: 140px;
-  width: 300px;
-    object-fit: cover;
+  height: 136px;
+  width: 133px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   }
+
+  p {
+    color: white;
+    text-align: center;
+  }
+}
+
+.card-carousel {
+  align-items: center;
+  justify-content: space-around;
+  position: center;
+  background-color: #00503c;
 }
 
 .infos-signin {
@@ -27,5 +49,38 @@
   p {
   text-align: center;
   color: white;
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.signin-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    height: 170px;
+  }
+}
+
+.logo-signin {
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    height: 80px;
+    margin-bottom: -15px;
   }
 }

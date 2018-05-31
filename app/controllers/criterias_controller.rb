@@ -7,7 +7,7 @@ class CriteriasController < ApplicationController
    def update
     @user = User.find(params[:id])
       if @user.update(user_params)
-      redirect_to edit_user_registration_path(@user)
+      redirect_to root_path
     else
       @user.errors.full_messages
       render :edit

@@ -1,16 +1,15 @@
 <div class="wrapper-sgnin">
   <div class="container-signin">
     <div class="col-xs-8 col-xs-offset-2">
-      <h2>Log in</h2>
-      <p><strong>Find your tennis partner!</strong></p>
-      <div >
-        <%= render 'carousel' %>
+      <div class="logo">
+       <%= cl_image_tag("TN_icone.png") %>
       </div>
-
+      <p>TENNIS NOW</p>
+      <strong>Find your tennis partner!</strong>
       <div class="signin-container">
         <%= render 'form-new-sessions' %>
-        <%#= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
       </div>
+        <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: "btn-fb" %>
     </div>
   </div>
 </div>

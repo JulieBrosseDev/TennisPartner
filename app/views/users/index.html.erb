@@ -14,7 +14,7 @@
             <div class="icons-card" >
               <div>
                 <i class="fas fa-map-marker-alt"></i>
-               to <%= Geocoder::Calculations.distance_between([current_user.latitude,current_user.longitude], [user.latitude,user.longitude]).round(1) %> km
+               at <%= Geocoder::Calculations.distance_between([current_user.latitude,current_user.longitude], [user.latitude,user.longitude]).round(1) %> km
                 </div>
               <div>
                 <i class="fas fa-caret-right" ></i>
