@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="index-conv-title">
+    <h3>Your conversations</h3>
+  </div>
+
+
+  <div class="all-conv">
+      <% @conversations.each do |conversation| %>
+      <div class="xs-col-6">
+        <div class="each-conv">
+          <div id="avatar-conv">
+            <%= cl_image_tag("#{conversation.users.first.picture}")%>
+          </div>
+
+          <div class="conv-name-date">
+            <div class="conv-name">
+              <%= conversation.users.first.name %>
+            </div>
+
+            <div class="date-indicator">
+              <%= conversation.messages.last.created_at %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%end%>
+    <%= cl_image_tag("TN_icone.png") %>
+  </div>
+</div>
+
+
