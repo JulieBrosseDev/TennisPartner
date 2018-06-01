@@ -1,15 +1,14 @@
 
 .message-list-container {
   background-color: #e8f4eb;
-  margin-right: 15px;
-  margin-left: 15px;
+  margin-right: 10px;
+  margin-left: 10px;
   padding: 10px;
   border-radius: 5px;
   font-size: 12px;
-  height: 55vh;
+  height: 69vh;
   overflow-y: auto;
-  max-height: 55vh;
-  margin-top: 100px;
+  margin-top: 22px;
 }
 
 .green-text {
@@ -30,8 +29,8 @@
     margin-top: 0px;
     margin-bottom: 15px;
     font-size: 17px;
-    width: 97px;
-    height: 58px;
+    width: 90px;
+    height: 52px;
   }
 }
 
@@ -82,7 +81,7 @@
 
 .text-right {
   margin-right: 15px;
-  text-align: center;
+  text-align: left;
   font-size: 15px;
   background-color: #00503c;
   border-radius: 15px;
@@ -95,7 +94,7 @@
 .text-left {
   margin-left: 15px;
   background-color: #F4F4F4;
-  text-align: center;
+  text-align: left;
   font-size: 15px;
   border-radius: 20px;
   padding-top: 5px;
