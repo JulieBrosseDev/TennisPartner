@@ -8,7 +8,9 @@
         <div class="each-conv">
           <div id="avatar-conv">
             <%= cl_image_tag("#{conversation.users.last.picture}")%>
+
             <%= link_to "", conversation_path(conversation), class: "conv-link" %>
+
           </div>
 
           <div class="conv-name-date">

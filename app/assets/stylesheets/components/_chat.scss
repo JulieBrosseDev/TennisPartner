@@ -27,10 +27,11 @@
   .btn-primary {
     background-color: #D9713B;
     border-color: #D9713B;
-    margin-top: 1px;
-    margin-bottom: 10px;
-    font-size: 14px;
-    width: 90px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    width: 97px;
+    height: 58px;
   }
 }
 
@@ -70,9 +71,13 @@
 
 .message-control {
   display: flex;
-  width: 100vw;
+  width: auto;
   justify-content: space-between;
   align-items: center;
+
+  .btn {
+    margin-left: 4px;
+  }
 }
 
 .text-right {
