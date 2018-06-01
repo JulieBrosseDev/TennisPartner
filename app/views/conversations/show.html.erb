@@ -1,20 +1,24 @@
-<h2 class="title-chat text-center">Let's chat and Plan!</h2>
-<div class="message-list-container">
- <%= render @messages %>
+<div class="conversation">
+  <div>
+    <h2 class="title-chat text-center">Let's chat and Plan!</h2>
+    <div class="message-list-container">
+     <%= render @messages %>
+    </div>
+  </div>
+
+  <div class="message-input">
+    <%= simple_form_for [@conversation, @message], remote: true do |f| %>
+    <div class="message-control">
+      <div class="mess-content" ><%= f.input :content, label: false %> </div>
+      <%= f.submit "SEND", class: "btn btn-primary" %>
+    </div>
+    <% end %>
+  </div>
 </div>
-
-<div class="message-input">
-  <%= simple_form_for [@conversation, @message], remote: true do |f| %>
-  <%= f.input :content, label: "Your message" %>
-  <%= f.submit "SEND", class: "btn btn-primary" %>
-  <% end %>
-</div>
-
-
 
 <% content_for :after_js do %>
   <script>
-    // scrollLastMessageIntoView();
+    scrollLastMessageIntoView();
     App['conversation_<%= @conversation.id %>'] = App.cable.subscriptions.create(
       { channel: 'ConversationsChannel', conversation_id: <%= @conversation.id %> },
       {
@@ -22,7 +26,7 @@
           if (data.current_user_id !== <%= current_user.id %>) {
             const messagesContainer = document.querySelector('.message-list-container');
             messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
-            // scrollLastMessageIntoView();
+            scrollLastMessageIntoView();
           }
         }
       })
