@@ -2,28 +2,32 @@
     <h3 class="page-title">Your Chats</h3>
   </div>
 
-
   <div class="all-conv">
       <% @conversations.each do |conversation| %>
+      <div class="xs-col-6">
         <div class="each-conv">
           <div id="avatar-conv">
-            <%= cl_image_tag("#{conversation.users.first.picture}")%>
+            <%= cl_image_tag("#{conversation.users.last.picture}")%>
+            <%= link_to "", conversation_path(conversation), class: "conv-link" %>
           </div>
 
           <div class="conv-name-date">
+            <%= link_to "", conversation_path(conversation), class: "conv-link" %>
             <div class="infos-content">
               <div class="font-conv-name">
-                <%= conversation.users.first.name %>
+                <%= conversation.users.last.name %>
               </div>
 
-            <div class="date-indicator">
-              <%= l(conversation.messages.last.created_at, format: :long) %>
-
+              <div class="font-conv-date">
+                <%= l(conversation.messages.last.created_at, format: :long) %>
+              </div>
             </div>
           </div>
-          <%= link_to "", conversation_path(conversation), class: "conv-link" %>
         </div>
+      </div>
       <%end%>
     <%= cl_image_tag("TN_icone.png") %>
   </div>
 </div>
+
+
