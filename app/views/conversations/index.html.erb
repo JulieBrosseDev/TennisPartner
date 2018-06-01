@@ -1,6 +1,5 @@
 <div class="container">
-  <div class="index-conv-title">
-    <h3>Your conversations</h3>
+    <h3 class="page-title">Your Chats</h3>
   </div>
 
 
@@ -13,12 +12,14 @@
           </div>
 
           <div class="conv-name-date">
-            <div class="conv-name">
-              <%= conversation.users.first.name %>
-            </div>
+            <div class="infos-content">
+              <div class="font-conv-name">
+                <%= conversation.users.first.name %>
+              </div>
 
-            <div class="date-indicator">
-              <%= conversation.messages.last.created_at %>
+              <div class="font-conv-date">
+                <%= conversation.messages.last.created_at %>
+              </div>
             </div>
           </div>
         </div>
@@ -27,5 +28,3 @@
     <%= cl_image_tag("TN_icone.png") %>
   </div>
 </div>
-
-

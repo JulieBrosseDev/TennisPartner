@@ -12,17 +12,14 @@
   margin-right: auto;
 }
 
+.edition {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 100px;
+  }
+
 .container-profile {
   margin-top: 30px;
   position: relative;
-
-  p {
-    text-align: center;
-    color: white;
-    font-size: 25px;
-    font-weight: bolder;
-    margin-bottom: 15px;
-  }
 
   a {
     height: 30px;
@@ -39,40 +36,24 @@
 }
 
 .icon-profile {
-  margin-top: 35px;
   display: flex;
   justify-content: space-around;
   color: #D9713B;
   font-size: 30px;
 }
 
-.txt-profile {
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  font-size: 15px;
-}
 
 .card-name-age1 {
   margin-top: 10px;
+  margin-bottom: 10px;
   color: white;
   text-align: center;
 }
 
-.lgout {
-  margin-top: 200px;
-  text-decoration: none;
-  text-align: center;
-}
 
-.logout-profile {
-  display:flex;
-  justify-content: center;
-  margin-top: 150px;
-
+.logout-button {
   a {
     color: white;
-    font-weight: bold;
     text-decoration: none;
   }
 
@@ -80,7 +61,3 @@
     color: #D9713B;
   }
 }
-
-
-
-
