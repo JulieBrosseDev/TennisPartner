@@ -3,7 +3,7 @@ Rails.application.configure do
 config.webpacker.check_yarn_integrity = false
 
 
-config.action_cable.url = "wss://www.tennis-now.club/cable"
+config.action_cable.url = "ws://www.tennis-now.club/cable"
 config.action_cable.allowed_request_origins = [ "http://www.tennis-now.club", "https://www.yourdomain.top" ]
 
   # Settings specified here will take precedence over those in config/application.rb.
