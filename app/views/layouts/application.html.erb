@@ -6,6 +6,7 @@
     <meta name="apple-mobile-web-app-title" content="Tennis" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
 
@@ -26,7 +27,7 @@
     <meta name="twitter:image:src" content="<%= meta_image %>">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <title>Tennis Now - Find your tennis partner</title>
+
     <%= render 'application/favicon' %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
@@ -47,7 +48,7 @@
       if(("standalone" in window.navigator) && window.navigator.standalone){
 
         // If you want to prevent remote links in standalone web apps opening Mobile Safari, change 'remotes' to true
-        var noddy, remotes = false;
+        var noddy, remotes = true;
 
         document.addEventListener('click', function(event) {
 

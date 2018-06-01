@@ -1,6 +1,5 @@
 <div class="container">
-  <div class="index-conv-title">
-    <h3>Your conversations</h3>
+    <h3 class="page-title">Your Chats</h3>
   </div>
 
 
@@ -12,12 +11,14 @@
           </div>
 
           <div class="conv-name-date">
-            <div class="conv-name">
-              <%= conversation.users.first.name %>
-            </div>
+            <div class="infos-content">
+              <div class="font-conv-name">
+                <%= conversation.users.first.name %>
+              </div>
 
             <div class="date-indicator">
               <%= l(conversation.messages.last.created_at, format: :long) %>
+
             </div>
           </div>
           <%= link_to "", conversation_path(conversation), class: "conv-link" %>
@@ -26,5 +27,3 @@
     <%= cl_image_tag("TN_icone.png") %>
   </div>
 </div>
-
-
