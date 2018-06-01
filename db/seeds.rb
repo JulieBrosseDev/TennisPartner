@@ -16,14 +16,14 @@ users = [
     description: "I've been playing tennis for almost 10+ years, mostly on a non-competitive level. Looking to meet and play with fellow tennis enthusiasts!"
   },
   {
-    name:         'Jonathan',
+    name:         'Mathieu',
     ranking:       2,
     gender:       'male',
     age:           32,
-    email: 'jonathan@gmail.com',
+    email: 'mathieu@gmail.com',
     password: 'azerty',
     address: '25 rue Brizard, Bordeaux',
-    picture: "https://images.beinsports.com/sIeysGac4Hgd3PLPgcYKC4BHykU=/full-fit-in/1000x0/rafael-nadal-cropped_wmzfnt73xdyc1vrwfvhjlm29a.jpg",
+    picture: "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/11265223_1633425850205972_238657041638751954_n.jpg?_nc_cat=0&oh=dc874d4df79846b8306c3cf6ddf9403c&oe=5B77C4C1",
     hand: "Right Handed",
     club: "TC Brizard",
     description: "Played tennis all through childhood competitively. Have played very little as an adult but would like to get back into it!"
@@ -42,14 +42,14 @@ users = [
     description: "Excited to get back to court. - Good at rallies and court coverage - Service needs to be worked upon a lot :)."
   },
   {
-    name:         'Marie',
+    name:         'Julie',
     ranking:       2,
     gender:       'female',
     age:           35,
-    email: 'marie@gmail.com',
+    email: 'julie@gmail.com',
     password: 'azerty',
     address: '17 rue Berruer, Bordeaux',
-    picture: "https://media.self.com/photos/5a68bdb10628db309dc0fce1/4:3/w_728,c_limit/serena-williams-return-to-tennis-after-giving-birth.jpg",
+    picture: "https://media.licdn.com/dms/image/C4E03AQGb0iP9A-O2Bg/profile-displayphoto-shrink_200_200/0?e=1529416800&v=beta&t=DuxJbnNlcisb3338www2fO3Hyy9oSFjJjnCxDTl6WtE",
     hand: "Right Handed",
     club: "Bordeaux Tennis",
     description: "Started playing tennis about a month ago. I think I'm getting a hang of it and am looking for people to practice and also be competitive. I can play after 7pm on weekdays and any time on weekends."
@@ -84,3 +84,8 @@ end
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# SERENA
+# https://media.self.com/photos/5a68bdb10628db309dc0fce1/4:3/w_728,c_limit/serena-williams-return-to-tennis-after-giving-birth.jpg
+
+#NADAl
+#https://images.beinsports.com/sIeysGac4Hgd3PLPgcYKC4BHykU=/full-fit-in/1000x0/rafael-nadal-cropped_wmzfnt73xdyc1vrwfvhjlm29a.jpg
