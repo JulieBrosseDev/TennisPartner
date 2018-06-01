@@ -6,7 +6,7 @@
     <% end %>
 
     <%= link_to profile_path(current_user) do %>
-      <i class="fas fa-user-circle <%= active_class?(edit_user_registration_path) %>"></i>
+      <i class="fas fa-user-circle <%= active_class?(profile_path) %>"></i>
     <% end %>
 
     <%= link_to conversations_path do %>

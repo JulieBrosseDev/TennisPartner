@@ -1,14 +1,26 @@
 <% if local_assigns.has_key? :user_is_messages_author %>
   <% if user_is_messages_author %>
-    <div class="text-right green-text"><%= message.content %></div>
+    <div class="message-content-right">
+      <div class="profile-picture-message" style="background-image: url(<%= cl_image_path current_user.picture %>)"></div>
+      <div class="text-right green-text"><%= message.content %></div>
+    </div>
   <% else %>
-    <div class="text-left orange-content" ><%= message.content %> </div>
+    <div class="message-content-left">
+      <div class="profile-picture-message" style="background-image: url(<%= cl_image_path message.user.picture %>)"></div>
+      <div class="text-left orange-text" > <%= message.content %> </div>
+    </div>
   <% end %>
 <% else %>
   <% if message.user_id == current_user.id%>
-    <div class="text-right green-text"><%= message.content %></div>
+    <div class="message-content-right">
+      <div class="profile-picture-message" style="background-image: url(<%= cl_image_path current_user.picture %>)"></div>
+      <div class="text-right green-text"><%= message.content %></div>
+    </div>
   <% else %>
-    <div class="text-left orange-content" ><%= message.content %> </div>
+    <div class="message-content-left">
+      <div class="profile-picture-message" style="background-image: url(<%= cl_image_path message.user.picture %>)"></div>
+      <div class="text-left orange-text" ><%= message.content %> </div>
+    </div>
   <% end %>
 <% end %>
 
