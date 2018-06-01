@@ -1,18 +1,17 @@
 <div class="footer">
   <div class="footer-links">
 
-    <%= link_to root_path do %>
-      <i class="fas fa-search <%= active_class?(root_path) %>"></i>
+    <%= link_to root_path, class: active_class?(root_path) do %>
+      <i class="fas fa-search"></i>
     <% end %>
 
-    <%= link_to profile_path(current_user) do %>
-      <i class="fas fa-user-circle <%= active_class?(profile_path) %>"></i>
+
+    <%= link_to profile_path, class: active_class?(edit_user_registration_path) do %>
+      <i class="fas fa-user-circle"></i>
     <% end %>
 
-    <%= link_to conversations_path do %>
-         <i class="fas fa-comment <%= active_class?(conversations_path) %> "></i>
-         <div class="badge">1
-        </div>
+    <%= link_to conversations_path, class: active_class?(conversations_path) do %>
+         <i class="fas fa-comment"></i>
     <% end %>
   </div>
 </div>

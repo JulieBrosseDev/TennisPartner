@@ -46,7 +46,8 @@
 
 body {
   background-color: #00503c;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 label {
@@ -57,6 +58,7 @@ label {
 .form-text {
   color: white;
   font-style: italic;
+  font-size: 11px;
 }
 
 .btn-light {
@@ -74,3 +76,4 @@ label {
 .simple_form {
   padding: 5px;
 }
+

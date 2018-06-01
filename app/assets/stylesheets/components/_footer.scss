@@ -19,7 +19,6 @@ html {
   padding: 0 30px;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-around;
 }
 
@@ -33,6 +32,11 @@ html {
   opacity: 1;
 }
 
+.footer-links a.active {
+  opacity: 1;
+  color: #D9713B;
+}
+
 .fa-search, .fa-user-circle, .fa-comment {
   color: #F7AA66;
 }
@@ -43,7 +47,6 @@ html {
 
 .fa-search.active, .fa-user-circle.active, .fa-comment.active {
   color: #D9713B;
-  opacity: 1;
 }
 
 .badge {
