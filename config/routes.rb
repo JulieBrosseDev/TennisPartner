@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # devise_scope :user do
   # delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   # end
+  mount ActionCable.server => "/cable"
   root to: 'users#index'
   resources :criterias
   resources :answers, only:[:create, :show] do

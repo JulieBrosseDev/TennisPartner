@@ -2,6 +2,10 @@ Rails.application.configure do
   # Verifies that versions and hashed value of the package contents in the project's package.json
 config.webpacker.check_yarn_integrity = false
 
+
+config.action_cable.url = "ws://www.tennis-now.club/cable"
+config.action_cable.allowed_request_origins = [ "http://www.tennis-now.club", "https://www.tennis-now.club" ]
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
