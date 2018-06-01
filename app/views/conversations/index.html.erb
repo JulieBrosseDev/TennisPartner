@@ -7,7 +7,7 @@
       <% @conversations.each do |conversation| %>
         <div class="each-conv">
           <div id="avatar-conv">
-            <%= cl_image_tag("#{conversation.users.first.picture}")%>
+            <%= cl_image_tag("#{conversation.users.last.picture}")%>
           </div>
 
           <div class="conv-name-date">
