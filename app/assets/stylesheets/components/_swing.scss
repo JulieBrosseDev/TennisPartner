@@ -1,10 +1,12 @@
-.viewport > h4 {
+#viewport {
+  h4 {
   display: flex;
   text-align: center;
   justify-content: center;
   margin-top: 280px;
   color: white;
   font-weight: bolder;
+  }
 }
 
 .card-picture {
