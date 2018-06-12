@@ -1,6 +1,10 @@
 <div class="cards-container" >
   <div id="viewport">
-    <h4>Adjust your search criterias :)</h4>
+    <div class="page-adjust-criterias">
+      <p class="page-title">More Tennis Partners?</p>
+      <%= link_to "Adjust your Search Criterias", edit_criteria_path(current_user), class: "btn btn-success" %>
+    </div>
+
 
     <ul class="stack">
       <% @users.each do |user|%>

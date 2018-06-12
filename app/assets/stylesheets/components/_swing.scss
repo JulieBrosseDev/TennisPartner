@@ -1,13 +1,3 @@
-#viewport {
-  h4 {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  margin-top: 280px;
-  color: white;
-  font-weight: bolder;
-  }
-}
 
 .card-picture {
   background-size: cover;
@@ -213,4 +203,10 @@ img {
   position: absolute;
   bottom: 0px;
   left: -120px;
+}
+
+.page-adjust-criterias {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }

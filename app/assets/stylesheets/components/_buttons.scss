@@ -1,7 +1,7 @@
 .logout-button {
-  margin-top: 78px;
+  margin-top: 60px;
   font-family: Arial;
-  font-size: 16;
+  font-size: 12px;
   display:flex;
   justify-content: center;
 }
@@ -13,4 +13,9 @@
   display: flex;
   justify-content: space-between;
   color: white;
+}
+
+.page-adjust-criterias > .btn-success {
+ margin-top: 20px;
+ border-radius: 5px;
 }
