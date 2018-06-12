@@ -6,7 +6,7 @@ class AnswersController < ApplicationController
       return redirect_to answer_path(@answer) if @answer.match?
       redirect_to root_path
     else
-      flash[:notice] = 'Impossible to like/dislike, try again :)'
+      flash[:notice] = 'Impossible to like/dislike, try again'
       redirect_to root_path
     end
   end

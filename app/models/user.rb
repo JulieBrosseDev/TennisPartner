@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   mount_uploader :picture, PictureUploader
 
- devise :database_authenticatable, :registerable,
+  devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :trackable, :validatable
- devise :omniauthable, omniauth_providers: [:facebook]
+  devise :omniauthable, omniauth_providers: [:facebook]
 
   DEFAULTS = {
     search_radius: 50,
@@ -24,17 +24,8 @@ class User < ApplicationRecord
   has_many :answers
   has_many :receiver_answers, foreign_key: "receiver_id", class_name: 'Answer'
 
-
-  # validates :name, presence: true
-  # validates :ranking, presence: true
-  # validates :gender, presence: true
-  # validates :age, presence: true
-  # validates :address, presence: true
-  # validates :picture, presence: true
-
   scope :all_except_me, ->(user) { where.not(id: user) }
   scope :opponent_with_gender, ->(opponent_gender) { opponent_gender == 'both' ? all : where(gender: opponent_gender || DEFAULTS[:opponent_gender]) }
-
   scope :has_answer, ->(user) { joins(:answers).where(answers: { user: user})}
   scope :has_feedback_by, ->(user) {joins(:receiver_answers).merge(Answer.where(user: user))}
   scope :has_no_feedback_by, ->(user) {where.not(id: has_feedback_by(user))}
