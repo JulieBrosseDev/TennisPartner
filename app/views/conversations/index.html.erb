@@ -7,7 +7,7 @@
       <div class="xs-col-6">
         <div class="each-conv">
           <div id="avatar-conv">
-            <%= cl_image_tag("#{conversation.users.last.picture}")%>
+            <%= cl_image_tag("#{conversation.users.first.picture}")%>
 
             <%= link_to "", conversation_path(conversation), class: "conv-link" %>
 
