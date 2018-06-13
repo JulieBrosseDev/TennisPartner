@@ -7,7 +7,11 @@
       <div class="xs-col-6">
         <div class="each-conv">
           <div id="avatar-conv">
-            <%= cl_image_tag("#{conversation.users.first.picture}")%>
+            <% if current_user == conversation.users.first %>
+              <%= cl_image_tag("#{conversation.users.last.picture}")%>
+            <% else %>
+              <%= cl_image_tag("#{conversation.users.first.picture}")%>
+            <% end %>
 
             <%= link_to "", conversation_path(conversation), class: "conv-link" %>
 
@@ -17,7 +21,11 @@
             <%= link_to "", conversation_path(conversation), class: "conv-link" %>
             <div class="infos-content">
               <div class="font-conv-name">
-                <%= conversation.users.last.name %>
+                <% if current_user == conversation.users.first %>
+                  <%= "#{conversation.users.last.name} & you" %>
+                <% else %>
+                  <%= "#{conversation.users.first.name} & you" %>
+                <% end %>
               </div>
 
               <div class="font-conv-date">
